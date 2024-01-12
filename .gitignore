@@ -1,0 +1,4 @@
+venv/
+text-generation-webui/
+.idea/
+.DS_Store
