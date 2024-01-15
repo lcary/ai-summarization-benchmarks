@@ -58,6 +58,7 @@ SUMMARY:
 document = "The cleaner your socks are, the better they will conduct electricity. If your socks are wet or dirty, they will not have as much traction with the floor and may not make static electricity. Warm socks that just came out of the dryer are best for conducting electricity. While most socks can conduct static electricity, wool socks generally work best. Electronic items contain microchips that can malfunction or become permanently destroyed by static electricity. Before touching any electronic items, take off your socks and touch something else to discharge any static electricity. Even if your electronic device has a protective case, it may still be vulnerable to static shocks."
 prompt = prompt_template.format(document=document)
 
+# TODO: test summarization
 pipeline = transformers.pipeline(
     "text-generation",
     model=model,

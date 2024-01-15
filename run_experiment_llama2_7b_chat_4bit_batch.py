@@ -27,15 +27,28 @@ check for that via `ls /user/local/cuda*` and set that to CUDA_HOME.
 
 Then, install dependencies:
 
-    !pip install transformers accelerate bitsandbytes torch
+    !pip install transformers accelerate bitsandbytes torch datasets
+    !pip install tensorrt --extra-index-url https://pypi.nvidia.com
+
+Troubleshooting: if you see an error like 'NotImplementedError: A UTF-8 locale is required.'
+Then run the following code in a notebook cell first:
+
+    import locale
+    locale.getpreferredencoding = lambda: "UTF-8"
+
+(From https://github.com/googlecolab/colabtools/issues/3409#issuecomment-1446281277)
 
 The notebook server may need to be restarted at this point.
 Finally, you can run the below script.
 """
+
+import os
+import random
 import time
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from datasets import load_dataset
+from transformers import BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer
 
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16
@@ -49,6 +62,7 @@ model = AutoModelForCausalLM.from_pretrained(
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
+
 
 prompt_template = """
 You are helpful AI assistant designed to summarize text documents.
@@ -72,20 +86,113 @@ Now, summarize the following document enclosed within triple backticks.
 Summary:
 """
 
-document = "The cleaner your socks are, the better they will conduct electricity. If your socks are wet or dirty, they will not have as much traction with the floor and may not make static electricity. Warm socks that just came out of the dryer are best for conducting electricity. While most socks can conduct static electricity, wool socks generally work best. Electronic items contain microchips that can malfunction or become permanently destroyed by static electricity. Before touching any electronic items, take off your socks and touch something else to discharge any static electricity. Even if your electronic device has a protective case, it may still be vulnerable to static shocks."
-prompt = prompt_template.format(document=document)
-truncation_length = 4096
-input_ids = tokenizer.encode(prompt, return_tensors="pt", add_special_tokens=True).to(
-    device
-)
+wikilingua_dataset = load_dataset("wiki_lingua", "english")
+data = wikilingua_dataset["train"]
 
-if truncation_length is not None:
-    input_ids = input_ids[:, -truncation_length:]
+
+def get_doc(item):
+    return item["article"]["document"]
+
+
+def has_document(item):
+    return bool(get_doc(item))
+
+
+data = list(filter(has_document, data))
+total_num_samples = 100
+wikilingua_sample = random.sample(data, total_num_samples)
+
+batch_size = 2
+
+
+def get_prompt(item):
+    return prompt_template.format(document=get_doc(item)[0])
+
+
+# def process_batch(docs: List[str]) -> Tuple[List[str], float]:
+#     inputs = tokenizer.batch_encode_plus(
+#         docs, return_tensors="pt", padding=True
+#     ).to(device)
+#
+#     generate_params = {
+#         "input_ids": inputs['input_ids'],
+#         "max_new_tokens": 200,
+#         "bos_token_id": 1,
+#         "eos_token_id": 2,
+#         "pad_token_id": 32000,
+#         "temperature": 0.9,
+#         "top_p": 0.6,
+#     }
+#
+#     start_time = time.time()
+#     with torch.no_grad():
+#         outputs = model.generate(**generate_params)
+#     duration = time.time() - start_time
+#     outputs = outputs.cuda()
+#
+#     summaries = tokenizer.batch_decode(outputs, skip_special_tokens=True)
+#
+#     del outputs
+#     del inputs
+#     torch.cuda.empty_cache()
+#
+#     return summaries, duration
+#
+#
+#
+# Process the documents in batches
+# all_summaries = []
+# all_durations = []
+#
+# # total_generation_samples = len(wikilingua_sample)
+# total_generation_samples = 20
+# for i in range(0, total_generation_samples, batch_size):
+#     batch_docs = [get_prompt(item) for item in wikilingua_sample[i:i + batch_size]]
+#     summaries, duration = process_batch(batch_docs)
+#     all_summaries.extend(summaries)
+#     all_durations.append(duration)
+#
+# summary = all_summaries[0]
+# print(summary)
+# avg_inference_time = sum(all_durations) / total_generation_samples
+# print(f"Inference time: {avg_inference_time}")
+#
+
+
+prompt0 = get_prompt(wikilingua_sample[0])
+prompt1 = get_prompt(wikilingua_sample[1])
+batch_docs = [prompt0, prompt1]
+
+truncation_length = 4096
+tokenizer.pad_token = tokenizer.eos_token
+inputs = tokenizer(
+    batch_docs,
+    return_tensors="pt",
+    add_special_tokens=True,
+    padding=True,
+    truncation=True,
+    max_length=truncation_length,
+).to(device)
+
+generate_params = {
+    "max_new_tokens": 200,
+    "input_ids": inputs["input_ids"],
+    "bos_token_id": 1,
+    "eos_token_id": 2,
+    "pad_token_id": 32000,
+    "temperature": 0.9,
+    "top_p": 0.6,
+}
+
+os.environ["CUDA_LAUNCH_BLOCKING"] = "1"
+os.environ["TORCH_USE_CUDA_DSA"] = "1"
+
+torch.cuda.empty_cache()
 
 
 generate_params = {
     "max_new_tokens": 200,
-    "inputs": input_ids,
+    "input_ids": inputs["input_ids"],
     "bos_token_id": 1,
     "eos_token_id": 2,
     "pad_token_id": 32000,
@@ -94,16 +201,18 @@ generate_params = {
 }
 
 start_time = time.time()
-output_ids = model.generate(**generate_params)[0]
+output_ids = model.generate(**generate_params)
+# TODO: fix error:
+# RuntimeError: CUDA error: device-side assert triggered
+# CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+# For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+# Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
 inference_time = time.time() - start_time
-output_ids = output_ids.cuda()
-new_tokens = len(output_ids) - len(input_ids[0])
 skip_special_tokens = True
-reply = tokenizer.decode(output_ids[-new_tokens:], skip_special_tokens)
-if len(output_ids) > 0:
-    if tokenizer.convert_ids_to_tokens(int(output_ids[-new_tokens])).startswith("▁"):
-        reply = " " + reply
-print(reply)
-
-# Usually 10-20 seconds for inference on ~1500 tokens:
+# TODO: batch decode
+# reply = tokenizer.decode(output_ids[-new_tokens:], skip_special_tokens)
+# if len(output_ids) > 0:
+#     if tokenizer.convert_ids_to_tokens(int(output_ids[-new_tokens])).startswith("▁"):
+#         reply = " " + reply
+# print(reply)
 print(f"Inference time: {inference_time}")

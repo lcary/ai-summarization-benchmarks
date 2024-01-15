@@ -47,30 +47,42 @@ The notebook server may need to be restarted at this point.
 Finally, you can run the below script.
 """
 
-from datasets import load_dataset, load_metric
 import random
 import time
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import torch
 
+import torch
+from datasets import load_dataset
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+
+quantization_config = BitsAndBytesConfig(
+    load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16
+)
 
 model_id = "meta-llama/Llama-2-7b-hf"
 
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-
-device = "cuda:0" if torch.cuda.is_available() else "cpu"
-
-# To allow llama 7b to be loaded successfully on T4 Colab instances, we load
-# the model in 8bit with fp16 tensors, and map directly to the gpu:
-# https://github.com/facebookresearch/llama/issues/394#issuecomment-1645415450
 model = AutoModelForCausalLM.from_pretrained(
-    model_id, load_in_8bit=True, device_map="auto", torch_dtype=torch.float16
+    model_id, device_map="auto", quantization_config=quantization_config
 )
+tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 wikilingua_dataset = load_dataset("wiki_lingua", "english")
-wikilingua_sample = random.sample(list(wikilingua_dataset["train"]), 100)
 
-# 4096 causes OOM on Colab's T4
+
+def get_doc(item):
+    return item["article"]["document"]
+
+
+def has_document(item):
+    return bool(get_doc(item))
+
+
+data = wikilingua_dataset["train"]
+data = list(filter(has_document, data))
+
+wikilingua_sample = random.sample(data, 100)
+
 input_max_tokens = 2048
 
 
@@ -110,24 +122,24 @@ input_ids = tokenizer.encode(
     prompt, return_tensors="pt", truncation=True, max_length=input_max_tokens
 ).to(device)
 
+max_new_tokens = 50
 start_time = time.time()
 summary_ids = model.generate(
     input_ids,
-    max_length=(input_max_tokens + 1),
-    length_penalty=5.0,
-    num_beams=2,
-    early_stopping=True,
+    max_new_tokens=max_new_tokens,
 )
 inference_time = time.time() - start_time
 del input_ids  # free up gpu memory
 summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 del summary_ids  # free up gpu memory
+torch.cuda.empty_cache()
 
 print(summary)
 print(f"inference_time: {inference_time}")
 
-# This achieves a working demo, but the quality of the summary appears poor
+# This achieves a slow working demo, but the quality of the summary appears poor
 # upon manual review of several iterations. This experiment was largely limited by RAM.
-# Next, we'll try using a fine-tuned Llama2 model. Since meta-llama/Llama-2-7b-chat-hf
-# and togethercomputer/LLaMA-2-7B-32K consume too much RAM for the Colab's T4 servers,
-# we'll try TheBloke/Llama-2-7B-Chat-GGUF.
+# Next, we'll try using a fine-tuned Llama2 model.
+# inference_time @ unlimited max generation tokens: 227.33489084243774 secs (long response)
+# inference_time @ 50 max generation tokens: 15.427298069000244
+# inference_time @ 10 max generation tokens: 10.593532085418701 (useless, abbrev. response)
