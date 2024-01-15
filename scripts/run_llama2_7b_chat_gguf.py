@@ -33,13 +33,13 @@ The notebook server may need to be restarted at this point.
 Finally, you can run the below script.
 """
 
-from datasets import load_dataset, load_metric
 import random
 import time
-from ctransformers import AutoModelForCausalLM, AutoConfig
-from transformers import AutoTokenizer
-import accelerate
+
 import torch
+from ctransformers import AutoModelForCausalLM, AutoConfig
+from datasets import load_dataset
+from transformers import AutoTokenizer
 
 model_id = "TheBloke/Llama-2-7B-Chat-GGUF"
 
@@ -65,9 +65,6 @@ model = AutoModelForCausalLM.from_pretrained(
     device_map=device,
     hf=True,
 )
-# Try .generate and decice_map via https://github.com/marella/ctransformers/issues/199
-wikilingua_dataset = load_dataset("wiki_lingua", "english")
-data = wikilingua_dataset["train"]
 
 
 def get_doc(item):
@@ -77,7 +74,9 @@ def get_doc(item):
 def has_document(item):
     return bool(get_doc(item))
 
-
+# Try .generate and decice_map via https://github.com/marella/ctransformers/issues/199
+wikilingua_dataset = load_dataset("wiki_lingua", "english")
+data = wikilingua_dataset["train"]
 data = list(filter(has_document, data))
 wikilingua_sample = random.sample(data, 100)
 
@@ -97,7 +96,7 @@ Below is an example of your task.
 ----------------------------------------- EXAMPLE -----------------------------------------
 [Document]: {eg_doc}
 
-You would be expected to produce a summary like:  {eg_summary}
+[Summary]: {eg_summary}
 ----------------------------------------- EXAMPLE -----------------------------------------
 
 Now, summarize the following document. 

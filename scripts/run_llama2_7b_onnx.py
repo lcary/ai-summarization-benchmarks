@@ -31,7 +31,19 @@ they approve the access request.
     !git config submodule.7B_FT_float16.url https://<PAT>@github.com/microsoft/Llama-2-Onnx-7-FT-16
     !git submodule update
 
- 3. This will take several minutes to complete.
+ 3. Wait for the download to complete. This will take several minutes to complete.
+
+Troubleshooting 'Host key verification failed.' errors:
+
+To fix error, you need to allow SSH clones for the Colab machine:
+
+    !ssh-keygen
+    !apt-get install jq
+    !curl --silent https://api.github.com/meta \
+      | jq --raw-output '"github.com "+.ssh_keys[]' >> ~/.ssh/known_hosts
+
+Note that it's very important to include the actual GitHub API URL in this request
+and that it's susceptible to MITM attacks if you aren't careful.
 
 CUDA Prerequisite Setup (Colab):
 
@@ -52,18 +64,43 @@ Then, install dependencies (note CUDA 12 requires a pre-release version of onnx 
 only available at a special index URL according to the GitHub issue here:
 https://github.com/microsoft/onnxruntime/issues/13932#issuecomment-1870251784):
 
-    !pip install torch numpy sentencepiece
-    !!pip install --index-url="https://pkgs.dev.azure.com/onnxruntime/onnxruntime/_packaging/onnxruntime-cuda-12/pypi/simple/" onnxruntime-gpu==1.17.0
+    !pip install torch numpy sentencepiece coloredlogs
+    !pip install --index-url="https://pkgs.dev.azure.com/onnxruntime/onnxruntime/_packaging/onnxruntime-cuda-12/pypi/simple/" onnxruntime-gpu==1.17.0
 
 The notebook server may need to be restarted at this point.
+This script is working with the following versions on a T4 GPU w/ 12GB System RAM and 15GB GPU RAM:
+
+ - Python 3.10.12
+ - CUDA 12.2
+ - onnxruntime-gpu=1.17.0
+ - torch==2.1.0+cu121
+ - numpy==1.23.5
+ - sentencepiece==0.1.99
+ - coloredlogs==15.0.1
 
 Verify the setup with:
 
     !python MinimumExample/Example_ONNX_LlamaV2.py --onnx_file 7B_FT_float16/ONNX/LlamaV2_7B_FT_float16.onnx --embedding_file 7B_FT_float16/embeddings.pth --tokenizer_path tokenizer.model --prompt "What is the lightest element?"
 
 Finally, you can run the below script.
+
+For prompt = "What is the lightest element?"
+ - @max_gen_len=256, inference_time: 37.35784649848938 seconds
+ - @max_gen_len=50, inference_time: 5.425885438919067
+ - @max_gen_len=10, inference_time: 1.177002191543579
+ - @max_gen_len=5, inference_time: 0.6269898414611816 (useless, abbrev. response)
+
+For summarization task (article on 'socks')
+ - @max_gen_len=50, inference_time: 28.697363138198853 (first attempt)
+ - @max_gen_len=50, inference time: 0.4881904125213623 (second attempt, how?)
+For summarization task (article on 'shampoo')
+ - @max_gen_len=50, inference_time: 55.52840971946716 (first attempt)
+ - @max_gen_len=50, inference time: 37.90727734565735 (second attempt)
+ - @max_gen_len=50, inference time: 45.60644197463989 (third attempt)
+ - @max_gen_len=1, inference time: 8.578016757965088
 """
 import os
+import random
 import time
 from typing import List, Tuple
 
@@ -71,7 +108,12 @@ import numpy as np
 import onnxruntime
 import torch
 from sentencepiece import SentencePieceProcessor
+from datasets import load_dataset
 
+# Session / model settings:
+onnx_file = "7B_FT_float16/ONNX/LlamaV2_7B_FT_float16.onnx"
+embedding_file = "7B_FT_float16/embeddings.pth"
+tokenizer_path = "tokenizer.model"
 
 class Tokenizer:
     def __init__(self, model_path: str):
@@ -100,25 +142,20 @@ class Tokenizer:
         return self.sp_model.decode(t)
 
 
-def run_onnx_llamav2(
-    prompt: str,
-    onnx_file: str,
-    embedding_file: str,
-    tokenizer_path: str,
-    max_gen_len: int = 256,
-) -> Tuple[str, float]:
-    # Create the ONNX session
-    options = onnxruntime.SessionOptions()
-    llm_session = onnxruntime.InferenceSession(
-        onnx_file,
-        sess_options=options,
-        providers=[
-            "DmlExecutionProvider",
-            "CUDAExecutionProvider",
-            "CPUExecutionProvider",
-        ],
-    )
+# Create the ONNX session
+options = onnxruntime.SessionOptions()
+llm_session = onnxruntime.InferenceSession(
+    onnx_file,
+    sess_options=options,
+    providers=[
+        "DmlExecutionProvider",
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider",
+    ],
+)
 
+
+def infer(llm_session: onnxruntime.InferenceSession, prompt: str, max_gen_len: int) -> Tuple[str, float]:
     # get the data type used by the model
     data_type_str = llm_session.get_inputs()[0].type
     if data_type_str == "tensor(float16)":
@@ -142,9 +179,12 @@ def run_onnx_llamav2(
     n_layers = k_cache_shape[1]
     n_heads = k_cache_shape[3]
 
+    start_tokenizer = time.time()
     # Initialize the tokenizer and produce the initial tokens.
     tokenizer = Tokenizer(model_path=tokenizer_path)
     tokens = tokenizer.encode(prompt, bos=True, eos=False)
+    tokenizer_time = time.time() - start_tokenizer
+    print(f"Tokenization time: {tokenizer_time}")
 
     # create the embedding layer.
     embedding_layer = torch.nn.Embedding(tokenizer.n_words, hidden_size)
@@ -205,26 +245,63 @@ def run_onnx_llamav2(
         x = x.cpu().detach().numpy().astype(data_type)
 
     output_str = tokenizer.decode(torch.tensor(output_tokens).tolist())
-
     return output_str, total_inference_time
 
 
-onnx_file = "7B_FT_float16/ONNX/LlamaV2_7B_FT_float16.onnx"
-embedding_file = "7B_FT_float16/embeddings.pth"
-tokenizer_path = "tokenizer.model"
-prompt = "What" "is" "the" "lightest" "element?"
-max_gen_len = 50
-response, inference_time = run_onnx_llamav2(
-    prompt,
-    onnx_file,
-    embedding_file,
-    tokenizer_path,
-    max_gen_len,
-)
+def get_doc(item):
+    return item["article"]["document"]
 
-print(response)
-print(f"inference_time: {inference_time}")
-# inference_time: 37.35784649848938 seconds at max_gen_len = 256
-# inference_time: 5.425885438919067 at 50 tokens
-# inference_time: 1.177002191543579 at 10 tokens
-# inference_time: 0.6269898414611816 at 5 tokens  (useless, abbrev. response)
+
+def has_document(item):
+    return bool(get_doc(item))
+
+
+# Try .generate and decice_map via https://github.com/marella/ctransformers/issues/199
+wikilingua_dataset = load_dataset("wiki_lingua", "english")
+data = wikilingua_dataset["train"]
+data = list(filter(has_document, data))
+wikilingua_sample = random.sample(data, 100)
+
+eg_sample = wikilingua_sample[0]
+eg_doc = get_doc(eg_sample)[0]
+eg_summary = eg_sample["article"]["summary"][0]
+
+new_sample = wikilingua_sample[1]
+new_doc = get_doc(new_sample)[0]
+
+prompt_template = """
+You are helpful AI assistant designed to summarize text documents. 
+The documents are wiki-like articles ranging in length and diverse in content. 
+The summaries you produce should be succinct but comprehensive,
+capturing the essentials of the document and excluding superfluous details. 
+Below is an example of your task.
+----------------------------------------- EXAMPLE -----------------------------------------
+[Document]: {eg_doc}
+
+[Summary]: {eg_summary}
+----------------------------------------- EXAMPLE -----------------------------------------
+
+Now, summarize the following document. 
+
+[Document]: {new_doc}
+"""
+
+prompt = prompt_template.format(
+    eg_doc=eg_doc,
+    eg_summary=eg_summary,
+    new_doc=new_doc,
+)
+print(prompt)
+
+output, inference_time = infer(llm_session, prompt, 50)
+print(output)
+print(f"inference time: {inference_time}")
+
+prompt_template = """
+You are helpful AI assistant designed to summarize text documents. 
+The documents are wiki-like articles ranging in length and diverse in content. 
+The summaries you produce should be succinct but comprehensive,
+capturing the essentials of the document and excluding superfluous details. 
+
+[Document]: {new_doc}
+"""
