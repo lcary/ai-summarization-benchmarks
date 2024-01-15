@@ -92,7 +92,6 @@ For prompt = "What is the lightest element?"
 
 For summarization task (article on 'socks')
  - @max_gen_len=50, inference_time: 28.697363138198853 (first attempt)
- - @max_gen_len=50, inference time: 0.4881904125213623 (second attempt, how?)
 For summarization task (article on 'shampoo')
  - @max_gen_len=50, inference_time: 55.52840971946716 (first attempt)
  - @max_gen_len=50, inference time: 37.90727734565735 (second attempt)
@@ -256,18 +255,13 @@ def has_document(item):
     return bool(get_doc(item))
 
 
-# Try .generate and decice_map via https://github.com/marella/ctransformers/issues/199
 wikilingua_dataset = load_dataset("wiki_lingua", "english")
 data = wikilingua_dataset["train"]
 data = list(filter(has_document, data))
 wikilingua_sample = random.sample(data, 100)
 
-eg_sample = wikilingua_sample[0]
-eg_doc = get_doc(eg_sample)[0]
-eg_summary = eg_sample["article"]["summary"][0]
-
-new_sample = wikilingua_sample[1]
-new_doc = get_doc(new_sample)[0]
+new_sample = wikilingua_sample[0]
+doc = get_doc(new_sample)[0]
 
 prompt_template = """
 You are helpful AI assistant designed to summarize text documents. 
@@ -276,32 +270,19 @@ The summaries you produce should be succinct but comprehensive,
 capturing the essentials of the document and excluding superfluous details. 
 Below is an example of your task.
 ----------------------------------------- EXAMPLE -----------------------------------------
-[Document]: {eg_doc}
+[Document]: Once you finish washing your bear, get rid of as much water as you can without handling the bear too harshly, so that it dries quicker and more thoroughly. Squeeze water from its limbs, torsos, and head, but be careful to keep their original shape. Do not wring or twist them as you would with a bath towel. Then use a towel to softly pat any remaining moisture from their fur. For best results, let your toy dry on its own. Either set it on top of a drying rack, away from direct sunlight, and let it sit overnight, or set it in a drying bag and hang that from a laundry line, as long as the laundry line is shaded. Do not hang the bear itself from any laundry line or rack, since this may damage it. Setting up a fan to blow directly on the bear will help it to dry out quicker. For quicker results, use a laundry dryer or hair dryer to speed things up. However, there is considerable risk in ruining your bear this way, so be extra careful. If you use a laundry dryer, stick with the air cycle. Check the bear every few minutes to make sure no damage has occurred. If you use a hair dryer, be mindful of the heat. Set it to its coolest setting and hold the dryer at least a foot away from the bear as you dry it. If your bear was too delicate for a machine-wash, consider it to be too delicate for a machine-dry, as well. Once the bear has dried out, use a clean comb or brush to freshen up its fur. Judge the feel of it as you do so. Although the fur’s quality won’t ever be the same once you start washing it, be on the lookout for any areas that feel crunchy. This may be a sign of soap that wasn’t rinsed out, so if your bear feels crunchy all over, either rinse it out and dry it all over again, or be sure to use less soap in the future.
 
-[Summary]: {eg_summary}
+[Summary]: Gently remove excess water. Allow your bear to air-dry. Use a dryer. Brush the bear.
 ----------------------------------------- EXAMPLE -----------------------------------------
 
 Now, summarize the following document. 
 
-[Document]: {new_doc}
+[Document]: {doc}
 """
 
-prompt = prompt_template.format(
-    eg_doc=eg_doc,
-    eg_summary=eg_summary,
-    new_doc=new_doc,
-)
+prompt = prompt_template.format(doc=doc)
 print(prompt)
 
 output, inference_time = infer(llm_session, prompt, 50)
 print(output)
 print(f"inference time: {inference_time}")
-
-prompt_template = """
-You are helpful AI assistant designed to summarize text documents. 
-The documents are wiki-like articles ranging in length and diverse in content. 
-The summaries you produce should be succinct but comprehensive,
-capturing the essentials of the document and excluding superfluous details. 
-
-[Document]: {new_doc}
-"""

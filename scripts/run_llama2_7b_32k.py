@@ -74,10 +74,9 @@ def run_experiments(model_name, data):
 
 def main():
     wikilingua_dataset = load_dataset("wiki_lingua", "english")
-
     wikilingua_sample = random.sample(list(wikilingua_dataset["train"]), 100)
 
-    df_results = run_experiments(models, wikilingua_sample)
+    df_results = run_experiments(model, wikilingua_sample)
 
     os.makedirs("data/", exist_ok=True)
     df_results.to_csv("data/summarization_results.csv", index=False)
