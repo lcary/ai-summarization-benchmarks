@@ -28,7 +28,8 @@ check for that via `ls /user/local/cuda*` and set that to CUDA_HOME.
 
 Then, install dependencies:
 
-    !pip install transformers accelerate bitsandbytes torch datasets rogue-score
+    !pip install transformers accelerate bitsandbytes torch datasets
+    !python -c 'from datasets import load_metric; load_metric("rouge")' || pip install rouge_score
 
 
 The notebook server may need to be restarted at this point.
@@ -46,7 +47,7 @@ from typing import Tuple, List, Iterator
 
 import torch
 from datasets import load_dataset, load_metric
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 def get_document(data: dict) -> list:
@@ -91,12 +92,12 @@ class LLM:
 
     def load_model_and_tokenizer(self, model_name: str):
         """ Loads the model and tokenizer into memory. """
-        quantization_config = BitsAndBytesConfig(
-            load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16
-        )
         self.model = AutoModelForCausalLM.from_pretrained(
-            model_name, device_map="auto", quantization_config=quantization_config
+            model_name,
+            device_map='auto',
+            load_in_8bit=True,
         )
+
         self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
     def _tokenize(self, text: str, **kwargs) -> torch.Tensor:

@@ -1,43 +1,8 @@
 """
 Overview
 
-This script uses a one-shot prompt with the Llama2-7b chat model (loaded
-in 4bit quantized format for inference optimization)
+This script uses a one-shot prompt with the Llama2-7b chat model
 to summarize text documents from the Wikilingua dataset.
-
-Instructions
-
-This assumes you are running on a GPU instance with a Python version >= 3.10
-and CUDA installed. Google Colab provides T4 GPU servers free of charge which
-should be sufficient.
-
-CUDA Prerequisite Setup (Colab):
-
-You will likely need to configure several settings for correct CUDA setup in Colab
-by running the below commands.
-
-    !export CUDA_HOME=/usr/local/cuda-12.2
-    # Workaround: https://github.com/pytorch/pytorch/issues/107960
-    !ldconfig /usr/lib64-nvidia
-    !ldconfig -p | grep libcuda
-
-The ldconfig command output should show libcuda.so, or else issues will occur,
-If the ldconfig requires a different directory, check for other nvidia libraries
-under /user/. If the notebook server has a different version of cuda home installed,
-check for that via `ls /user/local/cuda*` and set that to CUDA_HOME.
-
-Then, install dependencies:
-
-    !pip install transformers accelerate bitsandbytes torch datasets
-    !python -c 'from datasets import load_metric; load_metric("rouge")' || pip install rouge_score
-
-The notebook server may need to be restarted at this point.
-
-Next, log into huggingface (assuming an active virtualenv or conda env):
-
-    !huggingface-cli login
-
-Finally, you can run the below script.
 """
 import json
 import random
@@ -83,21 +48,48 @@ def evaluate_summary(docs: List[str], summaries: List[str]) -> float:
     )["rouge1"].mid
     return scores.fmeasure
 
+
+def get_default_model_and_tokenizer(model_name: str) -> tuple:
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+    return model, tokenizer
+
+def get_4bit_model_and_tokenizer(model_name: str) -> tuple:
+    quantization_config = BitsAndBytesConfig(
+        load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16
+    )
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name, device_map="auto", quantization_config=quantization_config
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+    return model, tokenizer
+
+def get_8bit_model_and_tokenizer(model_name: str) -> tuple:
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name, device_map="auto", load_in_8bit=True,
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+    return model, tokenizer
+
+
+EXPERIMENTS = {
+    "default": get_default_model_and_tokenizer,
+    "4-bit": get_4bit_model_and_tokenizer,
+    "8-bit": get_8bit_model_and_tokenizer
+}
+
+
 class LLM:
     """ Wrapper for running LLM generation on a GPU """
     def __init__(self):
         self.model = None
         self.tokenizer = None
 
-    def load_model_and_tokenizer(self, model_name: str):
+    def load_model_and_tokenizer(self, model_name: str, experiment: str):
         """ Loads the model and tokenizer into memory. """
-        quantization_config = BitsAndBytesConfig(
-            load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16
-        )
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_name, device_map="auto", quantization_config=quantization_config
-        )
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+        model, tokenizer = EXPERIMENTS[experiment](model_name)
+        self.model = model
+        self.tokenizer = tokenizer
 
     def _tokenize(self, text: str, **kwargs) -> torch.Tensor:
         return self.tokenizer.encode(text, return_tensors="pt", add_special_tokens=True, **kwargs)
@@ -129,16 +121,17 @@ class LLM:
         output = self.tokenizer.decode(output_ids[-new_tokens:], skip_special_tokens=True)
         return output, duration
 
-def main():
-    model_name = "meta-llama/Llama-2-7b-chat-hf"
-    sample_docs = 100
-    max_new_tokens = 100
-    max_input_tokens = 4096
-
+def main(
+    model_name = "meta-llama/Llama-2-7b-chat-hf",
+    sample_docs = 100,
+    max_new_tokens = 100,
+    max_input_tokens = 4096,
+    experiment = "4-bit",
+):
     dataset = load_sample(sample_docs)
 
     llm = LLM()
-    llm.load_model_and_tokenizer(model_name)
+    llm.load_model_and_tokenizer(model_name, experiment)
 
     start = time.time()
     data = []

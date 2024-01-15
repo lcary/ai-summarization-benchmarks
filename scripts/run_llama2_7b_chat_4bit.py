@@ -28,8 +28,8 @@ check for that via `ls /user/local/cuda*` and set that to CUDA_HOME.
 
 Then, install dependencies:
 
-    !pip install transformers accelerate bitsandbytes torch datasets rogue-score
-
+    !pip install transformers accelerate bitsandbytes torch datasets
+    !python -c 'from datasets import load_metric; load_metric("rouge")' || pip install rouge_score
 
 The notebook server may need to be restarted at this point.
 
