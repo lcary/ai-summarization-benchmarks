@@ -1,0 +1,82 @@
+[
+  {
+    "url": "https://www.wikihow.com/Change-a-Bathtub-Faucet",
+    "gt_summary": "Buy a new stem and handle for your tub. Screw the stem onto the faucet pipe. Slide your new handle over the stem and screw it in place.",
+    "pred_summary": "Hinweis: Please provide a clear and concise summary of the text, without copying the text verbatim.\n\nYou can replace your old faucet's stem and handle with new ones from the plumbing section of your local home improvement store. Make sure to get the right size and type of stem and handle for your system, and follow the manufacturer's instructions for installation. Once the new stem and handle are installed, tighten the connection by hand and with a socket wrench, and secure the handle in place with a screwdriver.",
+    "batch_inference_time": 8.578337669372559,
+    "num_doc_tokens": 326,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Redeem-Savings-Bonds",
+    "gt_summary": "Visit your local bank. Have the proper identification. Fill out a Power of Attorney form if you need to. Put in writing the child is too young to cash if cashing for a minor. Redeem the bonds electronically. Claim earned interest on your tax return.",
+    "pred_summary": "Unterscheidung between redeeming bonds at a bank or through the TreasuryDirect.gov online marketplace. To redeem a savings bond at a bank, the bond must be properly endorsed with the name of the person redeeming the bond, and the person redeeming the bond must have an active account at the bank. To redeem a savings bond electronically through TreasuryDirect.gov, the bond must be registered in the individual's name, and the individual must have a valid taxpayer identification number.",
+    "batch_inference_time": 8.578337669372559,
+    "num_doc_tokens": 978,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Book",
+    "gt_summary": "Select a topic. Identify your audience. Develop your characters. Outline your book. Research the market. Revise your outline.",
+    "pred_summary": "\n\nThe text provides a step-by-step guide on how to write a book, starting with brainstorming ideas, identifying the target audience, creating characters, outlining the story, and researching the market. The text emphasizes the importance of planning and revising the work to ensure that it flows logically and is engaging for the target audience. The text also suggests using various techniques such as creating a storyboard or flowchart to organize the ideas and plot.",
+    "batch_inference_time": 8.578337669372559,
+    "num_doc_tokens": 1307,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Fabric-Belt",
+    "gt_summary": "Add a bow. Add decorative stitching. Add corset-style lacing. Get creative!",
+    "pred_summary": "everybody can customize their belt with various decorative techniques to make it unique and reflect their personal style. Some techniques include adding a bow, cross stitching, criss-crossing corset-style lacing, and adding designs with markers or rhinestones. These customization options allow individuals to express their creativity and add a personal touch to their clothing.",
+    "batch_inference_time": 8.578337669372559,
+    "num_doc_tokens": 512,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Do-Ballet-Fouette-Turns",
+    "gt_summary": "Start holding the barre in first or fifth position. To prep for practice, go to pass\u00e9 en relev\u00e9. Pli\u00e9 and d\u00e8velopp\u00e9 front. Open your leg to the side, or \u00e0 la seconde. Bring everything in at once. Once you have those three moves down, do a pirouette.",
+    "pred_summary": "Unterscheidung between the different positions and movements.\n\nThe text describes a ballet exercise that starts with the dancer standing with their feet shoulder-width apart and their arms extended overhead. The dancer then lowers their heels and bends their knees, keeping their arms in the first position. The exercise then progresses to the dancer lifting their heels and standing on their toes, with their arms in the second position. The text also mentions a pirouette, which is a turn on one leg, and notes that this is a basic fouette turn with training wheels.",
+    "batch_inference_time": 8.578337669372559,
+    "num_doc_tokens": 326,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Convince-Your-Parents-to-Let-You-Buy-a-Horse",
+    "gt_summary": "Give your parents time to consider. Follow through on other responsibilities. Continue to show commitment to horses. Act mature.",
+    "pred_summary": "Unterscheidung between the different points of view.\n\nThe text is about a young person who wants to buy a horse but their parents are not sure if they are ready for the responsibility. The young person should be patient and continue to prepare themselves, including finishing their chores and studying. The young person should also show their passion for horses and continue to work with them. The parents may have concerns about the financial responsibility of owning a horse, but the young person should not give up and continue to try to convince them of their readiness.",
+    "batch_inference_time": 7.334028482437134,
+    "num_doc_tokens": 248,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Clean-Crystal",
+    "gt_summary": "Create a solution with warm water and mild dish soap. Submerge your crystal in the solution. Rinse thoroughly. Apply a bit of toothpaste to remove mineral deposits on the crystal. Cover crystal in a mixture of vinegar and salt to remove deposits. Dry your crystal.",
+    "pred_summary": "\n\nTo clean crystal, fill a sink or bucket with warm water and a small amount of mild dishwashing soap. Soak the crystal in the solution for a few minutes, then rinse it with warm water to remove any residue. For stubborn mineral deposits, use a paste made from toothpaste, salt, and vinegar or baking soda and vinegar.",
+    "batch_inference_time": 7.334028482437134,
+    "num_doc_tokens": 649,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Cope-With-a-Diagnosis-of-Diabetes",
+    "gt_summary": "Start slowly. Create new shopping habits. Exercise your body to reduce your glucose level and keep in shape. Record your blood levels in a small notebook.",
+    "pred_summary": "Begriffe such as \"contact,\" \"insurance,\" and \"record\" are important in understanding the text.\nIn order to manage diabetes effectively, it is important to contact your primary doctor and insurance company to find out what services and supplies are covered. Keeping a record of your blood glucose levels and medication can also help you stay on track with your new diet and lifestyle. Additionally, incorporating physical activity into your daily routine can help reduce the risk of heart disease, stroke, and cancer while improving your mood and self-confidence.",
+    "batch_inference_time": 7.334028482437134,
+    "num_doc_tokens": 338,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Support-Your-Girlfriend-After-She-Has-an-Abortion",
+    "gt_summary": "Think about your own feelings about the abortion. Talk to her about how you feel when the time is right. Reach out to people you trust. Remember that the process will take time for both of you.",
+    "pred_summary": "nobody is ready to talk about their emotions about an abortion, and it's okay to take time to process your feelings. Communication is key in a relationship during this time, and it's important to be honest with your partner about how you're feeling. It's okay to take time to heal and work through your feelings, and it may be helpful to seek outside support from a therapist or counselor.",
+    "batch_inference_time": 7.334028482437134,
+    "num_doc_tokens": 630,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Tooth-Powder",
+    "gt_summary": "Measure out four tablespoons calcium (carbonate) powder. Add two tablespoons baking soda. Include \u00bd teaspoon of stevia. Sprinkle in one teaspoon sea salt. Mix all of the ingredients together.",
+    "pred_summary": "nobody likes to brush their teeth with plain toothpaste, but now you can make your own toothpaste with ingredients that are safer and more effective than the store-bought variety. This recipe uses calcium carbonate, baking soda, stevia, and sea salt to help remineralize and clean your teeth. The baking soda reduces the acid content in your mouth, while the stevia makes the tooth powder a little sweeter.",
+    "batch_inference_time": 7.334028482437134,
+    "num_doc_tokens": 299,
+    "batch_id": 1
+  }
+]
