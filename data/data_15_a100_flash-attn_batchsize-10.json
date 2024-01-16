@@ -1,0 +1,82 @@
+[
+  {
+    "url": "https://www.wikihow.com/Change-a-Bathtub-Faucet",
+    "gt_summary": "Buy a new stem and handle for your tub. Screw the stem onto the faucet pipe. Slide your new handle over the stem and screw it in place.",
+    "pred_summary": "Unterscheidung between stem and handle.\n\nA stem is the part of a faucet that connects to the pipes, and a handle is the part that you turn to control the water flow. When replacing a faucet, you will need to bring the old stem and handle to the store with you to ensure a proper fit. Make sure to buy stems that match your old ones and handles that match the rest of your bathroom.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 326,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Redeem-Savings-Bonds",
+    "gt_summary": "Visit your local bank. Have the proper identification. Fill out a Power of Attorney form if you need to. Put in writing the child is too young to cash if cashing for a minor. Redeem the bonds electronically. Claim earned interest on your tax return.",
+    "pred_summary": "Einzeln or a group of people can redeem savings bonds at a bank. The bank may have restrictions on the amount they will cash, and the name on the bond must match the name on the account. Individuals can also redeem their savings bonds electronically through TreasuryDirect.gov.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 978,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Book",
+    "gt_summary": "Select a topic. Identify your audience. Develop your characters. Outline your book. Research the market. Revise your outline.",
+    "pred_summary": "\n\nTo write a book, start by generating a list of potential topics, then select one that excites you and develop an elevator pitch for it. Identify your target audience and create fictional reader profiles to help guide your writing. Finally, create an outline to help you stay focused and ensure that your book has a clear structure.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 1307,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Fabric-Belt",
+    "gt_summary": "Add a bow. Add decorative stitching. Add corset-style lacing. Get creative!",
+    "pred_summary": "Unterscheidung between different types of bows, including basic shoelace-style knots and more intricate designs. Provide tips on how to customize a belt, such as adding designs with markers, stitching or writing a favorite quote, and distressing it. Offer suggestions for additional ways to customize a belt, including adding rhinestones or faux metal spikes, stitching in decorative lace or fringe, and creating a corset-style lacing system.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 512,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Do-Ballet-Fouette-Turns",
+    "gt_summary": "Start holding the barre in first or fifth position. To prep for practice, go to pass\u00e9 en relev\u00e9. Pli\u00e9 and d\u00e8velopp\u00e9 front. Open your leg to the side, or \u00e0 la seconde. Bring everything in at once. Once you have those three moves down, do a pirouette.",
+    "pred_summary": "nobody likes a long wall of text.\n\nThe text describes a barre exercise that starts with a pass\u00e9 position and then adds movements such as pli\u00e9, develop\u00e9, and pirouette. The exercise begins with the right foot on the barre and the left hand on the bar, and then progresses to various positions and movements. The exercise emphasizes proper alignment and engagement of the core muscles throughout.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 326,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Convince-Your-Parents-to-Let-You-Buy-a-Horse",
+    "gt_summary": "Give your parents time to consider. Follow through on other responsibilities. Continue to show commitment to horses. Act mature.",
+    "pred_summary": "kwiet 12, 2023\n\nThe best way to convince your parents to buy you a horse is to show them that you are responsible and passionate about working with horses. You should be patient and continue to prepare yourself, finish your chores, and stay out of trouble. If your parents say no, thank them for their consideration and continue to work with horses, demonstrating your dedication and maturity.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 248,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Clean-Crystal",
+    "gt_summary": "Create a solution with warm water and mild dish soap. Submerge your crystal in the solution. Rinse thoroughly. Apply a bit of toothpaste to remove mineral deposits on the crystal. Cover crystal in a mixture of vinegar and salt to remove deposits. Dry your crystal.",
+    "pred_summary": "Begriffe: crystal, clean, water, soap, rinse, toothpaste, vinegar, baking soda, water spots.\n\nCrystal can be cleaned with warm water and a small amount of mild dishwashing soap. After soaking or wiping down the crystal with a damp cloth, rinse it with warm water to remove any soap residue. For stubborn mineral deposits, a paste made from toothpaste, vinegar, and salt can be applied to the crystal and left on for 10 minutes before rinsing off.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 649,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Cope-With-a-Diagnosis-of-Diabetes",
+    "gt_summary": "Start slowly. Create new shopping habits. Exercise your body to reduce your glucose level and keep in shape. Record your blood levels in a small notebook.",
+    "pred_summary": "hopefully this will help you to understand what you need to do.\n\nContact your primary doctor and insurance company to get help with covering the cost of diabetic supplies and medications. Write down your blood glucose levels in a small notebook every time you finish a meal to keep track of your daily glucose levels and record your daily meals and questions for your doctor. Keep a shopping list of diabetic supplies and medications and organize local stores that carry these products.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 338,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Support-Your-Girlfriend-After-She-Has-an-Abortion",
+    "gt_summary": "Think about your own feelings about the abortion. Talk to her about how you feel when the time is right. Reach out to people you trust. Remember that the process will take time for both of you.",
+    "pred_summary": "Hinweis: The summary should be concise and accurate, without including any personal opinions or biases.\n\nThe text suggests that after an abortion, it's important for the partner to confront their emotions and talk to someone they trust, such as a counselor or a trusted friend or family member. It's also important to communicate with the partner and set boundaries around what feels comfortable for both parties. Finally, it's important to prioritize mental health and seek professional help if needed.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 630,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Tooth-Powder",
+    "gt_summary": "Measure out four tablespoons calcium (carbonate) powder. Add two tablespoons baking soda. Include \u00bd teaspoon of stevia. Sprinkle in one teaspoon sea salt. Mix all of the ingredients together.",
+    "pred_summary": "Unterscheidung between Calcium Carbonate and Calcium Citrate. Calcium carbonate is a common ingredient in toothpaste and is used to help strengthen tooth enamel. Calcium citrate, on the other hand, is a more recent ingredient that has been shown to be more effective at preventing tooth decay than calcium carbonate. It is important to note that calcium carbonate is not the same as calcium citrate, and the two should not be used interchangeably in toothpaste recipes.",
+    "batch_inference_time": 11.61566948890686,
+    "num_doc_tokens": 299,
+    "batch_id": 0
+  }
+]

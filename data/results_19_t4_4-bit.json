@@ -1,0 +1,8 @@
+{
+  "total_time": 56.27449440956116,
+  "total_docs": 10,
+  "avg_doc_per_sec": 0.17783730999800929,
+  "avg_sec_per_doc": 5.623116993904114,
+  "avg_doc_tokens": 561.3,
+  "pred_score": 0.2872816673075167
+}
