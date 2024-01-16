@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://www.wikihow.com/Change-a-Bathtub-Faucet",
+    "gt_summary": "Buy a new stem and handle for your tub. Screw the stem onto the faucet pipe. Slide your new handle over the stem and screw it in place.",
+    "pred_summary": "\n\nWhen replacing a faucet, bring the old stem and handle to the store to ensure a proper fit. The stem and handle should match the rest of your bathroom fixtures and work with your system. Once the stem is securely attached to the pipes, the new handle can be placed over the stem and tightened in place.",
+    "inference_time": 17.866901874542236,
+    "num_doc_tokens": 326
+  },
+  {
+    "url": "https://www.wikihow.com/Redeem-Savings-Bonds",
+    "gt_summary": "Visit your local bank. Have the proper identification. Fill out a Power of Attorney form if you need to. Put in writing the child is too young to cash if cashing for a minor. Redeem the bonds electronically. Claim earned interest on your tax return.",
+    "pred_summary": "\n\nBanks may redeem savings bonds, but they have restrictions on the amount they will cash and may only redeem bonds for customers. The Federal Reserve Bank can also redeem savings bonds. To redeem savings bonds electronically, you can go to TreasuryDirect.gov.",
+    "inference_time": 14.85480523109436,
+    "num_doc_tokens": 978
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Book",
+    "gt_summary": "Select a topic. Identify your audience. Develop your characters. Outline your book. Research the market. Revise your outline.",
+    "pred_summary": "\nThe above text describes the process of writing a book, including selecting a topic, developing characters, creating an outline, and revising the work. The text suggests that brainstorming ideas, creating an elevator pitch, and identifying the target audience are important steps in the process. Additionally, the text recommends creating a detailed outline that includes the 5 main sections of a story arc and researching the market to identify what makes the book unique.",
+    "inference_time": 19.670673370361328,
+    "num_doc_tokens": 1307
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Fabric-Belt",
+    "gt_summary": "Add a bow. Add decorative stitching. Add corset-style lacing. Get creative!",
+    "pred_summary": "\n\nYou can customize your fabric belt in many ways, including adding a bow, cross stitching, or crisscross lacing. You can also use fabric paint, markers, or other embellishments to create unique designs. There are many ways to personalize your belt, so feel free to get creative and make it your own.",
+    "inference_time": 15.647392511367798,
+    "num_doc_tokens": 512
+  },
+  {
+    "url": "https://www.wikihow.com/Do-Ballet-Fouette-Turns",
+    "gt_summary": "Start holding the barre in first or fifth position. To prep for practice, go to pass\u00e9 en relev\u00e9. Pli\u00e9 and d\u00e8velopp\u00e9 front. Open your leg to the side, or \u00e0 la seconde. Bring everything in at once. Once you have those three moves down, do a pirouette.",
+    "pred_summary": "\n\nThe text describes a barre exercise routine for beginners that focuses on the fundamental movements of ballet, including pass\u00e9, relev\u00e9, pli\u00e9, and pirouette. The routine starts with the feet shoulder-width apart and the barre for balance, then progresses to working on one leg while holding the barre, and finally moves to a pirouette at the barre. Throughout the routine, the text emphasizes the importance of keeping the core tight and hips down.",
+    "inference_time": 21.209458589553833,
+    "num_doc_tokens": 326
+  },
+  {
+    "url": "https://www.wikihow.com/Convince-Your-Parents-to-Let-You-Buy-a-Horse",
+    "gt_summary": "Give your parents time to consider. Follow through on other responsibilities. Continue to show commitment to horses. Act mature.",
+    "pred_summary": "\n\nThe best way to convince your parents to buy you a horse is to show them that you are responsible, passionate, and can handle the responsibility of owning a horse. Be patient and continue to prepare yourself, and show your parents that you are ready for the commitment. Don't blame them if they say no, and keep trying to convince them that you can handle horse ownership.",
+    "inference_time": 17.180880784988403,
+    "num_doc_tokens": 248
+  },
+  {
+    "url": "https://www.wikihow.com/Clean-Crystal",
+    "gt_summary": "Create a solution with warm water and mild dish soap. Submerge your crystal in the solution. Rinse thoroughly. Apply a bit of toothpaste to remove mineral deposits on the crystal. Cover crystal in a mixture of vinegar and salt to remove deposits. Dry your crystal.",
+    "pred_summary": "\nCleaning crystal requires warm water and a small amount of mild dishwashing soap. To remove mineral deposits, rub toothpaste around the crystal and rinse it off. For more stubborn residue, try using a baking soda and vinegar paste and then rinse the crystal with water.",
+    "inference_time": 14.728014707565308,
+    "num_doc_tokens": 649
+  },
+  {
+    "url": "https://www.wikihow.com/Cope-With-a-Diagnosis-of-Diabetes",
+    "gt_summary": "Start slowly. Create new shopping habits. Exercise your body to reduce your glucose level and keep in shape. Record your blood levels in a small notebook.",
+    "pred_summary": "\n\nIn order to properly care for diabetes, you must first contact your primary doctor and then seek out additional assistance from other medical professionals. Write down all diabetic supplies and medications you will need and keep a record of your blood glucose levels. Keep a small notebook with your daily meals, phone numbers, and questions for your doctor, and inform your family and friends where to find it in case of an emergency.",
+    "inference_time": 18.770164728164673,
+    "num_doc_tokens": 338
+  },
+  {
+    "url": "https://www.wikihow.com/Support-Your-Girlfriend-After-She-Has-an-Abortion",
+    "gt_summary": "Think about your own feelings about the abortion. Talk to her about how you feel when the time is right. Reach out to people you trust. Remember that the process will take time for both of you.",
+    "pred_summary": "\n\nIt's normal for a person to feel a range of emotions after an abortion, including relief, loss, regret, guilt, confusion, and powerlessness. It's important to be honest with your girlfriend about your feelings and to communicate openly and honestly with her. Talking to a trusted friend or family member or a therapist or counselor can also be helpful in processing your emotions and healing.",
+    "inference_time": 19.872223377227783,
+    "num_doc_tokens": 630
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Tooth-Powder",
+    "gt_summary": "Measure out four tablespoons calcium (carbonate) powder. Add two tablespoons baking soda. Include \u00bd teaspoon of stevia. Sprinkle in one teaspoon sea salt. Mix all of the ingredients together.",
+    "pred_summary": "\nCalcium carbonate and baking soda are two common ingredients used in homemade tooth powders. These ingredients help to rebuild the calcium in your teeth and reduce the acid content in your mouth. By adding stevia, sea salt, and other ingredients, you can create a tooth powder that is both effective and gentle on your teeth.",
+    "inference_time": 16.778483390808105,
+    "num_doc_tokens": 299
+  }
+]

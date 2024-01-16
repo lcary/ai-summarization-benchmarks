@@ -1,0 +1,702 @@
+[
+  {
+    "url": "https://www.wikihow.com/Change-a-Bathtub-Faucet",
+    "gt_summary": "Buy a new stem and handle for your tub. Screw the stem onto the faucet pipe. Slide your new handle over the stem and screw it in place.",
+    "pred_summary": "\n\nWhen replacing a faucet, bring the old stem and handle with you to the store to ensure proper fit. Measure the stem and handle to ensure you buy the correct replacement parts. Once you have the new stem and handle, install the stem into the faucet by hand-tightening it and then using a socket wrench to secure it to the pipes.",
+    "inference_time": 3.8132646083831787,
+    "num_doc_tokens": 326
+  },
+  {
+    "url": "https://www.wikihow.com/Redeem-Savings-Bonds",
+    "gt_summary": "Visit your local bank. Have the proper identification. Fill out a Power of Attorney form if you need to. Put in writing the child is too young to cash if cashing for a minor. Redeem the bonds electronically. Claim earned interest on your tax return.",
+    "pred_summary": "\nTo redeem a savings bond, you must go to a bank that is willing to cash the bond. If the bank will not redeem the bond, you can try the Federal Reserve Bank. You will need proper identification to redeem the bond, and the name on the bond, the name on your account, and the name on your identification must match.",
+    "inference_time": 2.8869805335998535,
+    "num_doc_tokens": 978
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Book",
+    "gt_summary": "Select a topic. Identify your audience. Develop your characters. Outline your book. Research the market. Revise your outline.",
+    "pred_summary": " The process of writing a book involves selecting a topic, generating a list of potential topics, and selecting a topic that excites you. Once you have identified your audience, create fictional reader profiles and develop interesting and complex characters. Outlining is also an important step in the writing process, as it helps you stay focused and avoid straying from your plot.",
+    "inference_time": 2.829080581665039,
+    "num_doc_tokens": 1307
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Fabric-Belt",
+    "gt_summary": "Add a bow. Add decorative stitching. Add corset-style lacing. Get creative!",
+    "pred_summary": "\n\nBows look great on fabric belts, and they can be made from leftover fabric from the belt itself. There are many bow variations, from simple to intricate, and they can be attached to the belt in different ways, such as stitching or tying. Customizing a belt is limitless, and you can use various techniques, such as adding designs with markers, stitching or writing a quote, or adding rhinestones or faux metal spikes.",
+    "inference_time": 3.710792064666748,
+    "num_doc_tokens": 512
+  },
+  {
+    "url": "https://www.wikihow.com/Do-Ballet-Fouette-Turns",
+    "gt_summary": "Start holding the barre in first or fifth position. To prep for practice, go to pass\u00e9 en relev\u00e9. Pli\u00e9 and d\u00e8velopp\u00e9 front. Open your leg to the side, or \u00e0 la seconde. Bring everything in at once. Once you have those three moves down, do a pirouette.",
+    "pred_summary": "\n\nThe text describes a barre exercise that focuses on the relev\u00e9 and pli\u00e9 movements, with the goal of developing proper alignment and technique. The exercise begins with the right foot brought to the left knee and the left arm in first position, and then progresses through a series of movements that include the development of the front, pirouettes, and fouette turns. The exercise is designed to be done with a barre, but can also be adapted for floor work once proper technique is achieved.",
+    "inference_time": 3.6587486267089844,
+    "num_doc_tokens": 326
+  },
+  {
+    "url": "https://www.wikihow.com/Convince-Your-Parents-to-Let-You-Buy-a-Horse",
+    "gt_summary": "Give your parents time to consider. Follow through on other responsibilities. Continue to show commitment to horses. Act mature.",
+    "pred_summary": "\n\nThe best way to convince your parents to buy a horse is to show them that you are responsible, passionate, and ready for the commitment. Be patient and continue to prepare yourself, and demonstrate your ability to handle responsibility and handle the extra work that comes with owning a horse. If they say no, thank them for their consideration and continue to work towards your goal.",
+    "inference_time": 2.7831811904907227,
+    "num_doc_tokens": 248
+  },
+  {
+    "url": "https://www.wikihow.com/Clean-Crystal",
+    "gt_summary": "Create a solution with warm water and mild dish soap. Submerge your crystal in the solution. Rinse thoroughly. Apply a bit of toothpaste to remove mineral deposits on the crystal. Cover crystal in a mixture of vinegar and salt to remove deposits. Dry your crystal.",
+    "pred_summary": "\n\nTo clean crystal, fill a sink or bucket with warm water and a small amount of mild dish soap, and submerge the crystal in the solution. For larger items, use a clean, wet cloth or sponge to wipe down the item and remove any lingering soap. If the crystal is cloudy from mineral deposits or other residue, you can use a paste made from vinegar and salt or baking soda and vinegar to remove the residue.",
+    "inference_time": 3.7772164344787598,
+    "num_doc_tokens": 649
+  },
+  {
+    "url": "https://www.wikihow.com/Cope-With-a-Diagnosis-of-Diabetes",
+    "gt_summary": "Start slowly. Create new shopping habits. Exercise your body to reduce your glucose level and keep in shape. Record your blood levels in a small notebook.",
+    "pred_summary": "\n\nIt is important to create a new, healthy system for managing diabetes. This involves contacting your primary doctor, seeking additional assistance from medical professionals, and organizing your shopping routine. Additionally, it is important to stay active and write down your blood glucose levels to keep track of your progress.",
+    "inference_time": 2.4064903259277344,
+    "num_doc_tokens": 338
+  },
+  {
+    "url": "https://www.wikihow.com/Support-Your-Girlfriend-After-She-Has-an-Abortion",
+    "gt_summary": "Think about your own feelings about the abortion. Talk to her about how you feel when the time is right. Reach out to people you trust. Remember that the process will take time for both of you.",
+    "pred_summary": "\nIt's important to confront your emotions and be honest with your girlfriend about how you feel about the abortion. It's okay if you don't feel ready to talk to her yet, but it's important to communicate when you are ready. Be open and honest with each other, and consider seeking outside help if needed.",
+    "inference_time": 2.5151026248931885,
+    "num_doc_tokens": 630
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Tooth-Powder",
+    "gt_summary": "Measure out four tablespoons calcium (carbonate) powder. Add two tablespoons baking soda. Include \u00bd teaspoon of stevia. Sprinkle in one teaspoon sea salt. Mix all of the ingredients together.",
+    "pred_summary": "\nTo make tooth powder, you will need to crush calcium carbonate tablets or buy calcium powder in bulk. Add four tablespoons of baking soda, two tablespoons of baking soda, \u00bd teaspoon of stevia, and one teaspoon of sea salt to a bowl. Mix all of the ingredients together until they are well combined.",
+    "inference_time": 3.0828676223754883,
+    "num_doc_tokens": 299
+  },
+  {
+    "url": "https://www.wikihow.com/Ease-Peptic-Ulcers-Using-Bananas",
+    "gt_summary": "Eat three bananas per day. Combine bananas with other healthy foods. Avoid acidic fruits. Cook your vegetables and do not eat them raw. Limit your alcohol intake to a couple of drinks per day. Cut back on coffee. Avoid smoking. Consider switching from aspirin to acetaminophen.",
+    "pred_summary": "\nEating three bananas per day may help prevent and reduce ulcer pain. Non-acidic fruits like kiwi, mango, and papaya, along with lightly boiled vegetables like broccoli or carrots, can also be added to the diet. Limiting alcohol intake, quitting smoking, and switching to acetaminophen for pain relief can also help prevent and treat ulcers.",
+    "inference_time": 3.25801944732666,
+    "num_doc_tokens": 736
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Simple-Electric-Generator",
+    "gt_summary": "Cut the cardboard. Mark the cardboard. Fold the cardboard. Slide the metal shaft through the support frame.",
+    "pred_summary": "\n\nThe cardboard frame will house the components of a simple electric motor. A nail is used to create a hole in the center of the frame for a shaft. Any metal shaft will work, or you can use the nail as the shaft.",
+    "inference_time": 1.9400863647460938,
+    "num_doc_tokens": 403
+  },
+  {
+    "url": "https://www.wikihow.com/Get-Your-Boyfriend-to-Cuddle-With-You",
+    "gt_summary": "Choose your moment. Lay your head on your boyfriend's shoulder. Put your hand on him. Look into his eyes. Ask him to cuddle.",
+    "pred_summary": "\n\nA quiet moment is a good time to start a cuddle. Try arranging a candlelit movie night or a moment after a date that's gone particularly well. If he hasn't moved toward you yet, turn and look at his face and smile, and lean in for a kiss.",
+    "inference_time": 2.292069911956787,
+    "num_doc_tokens": 201
+  },
+  {
+    "url": "https://www.wikihow.com/Multiply-Factorials",
+    "gt_summary": "Use a formula to factor out the largest common factorial. Rewrite the equation, showing the common factorial as a squared value. Multiply the remaining factors.",
+    "pred_summary": "\n\nThe formula for calculating a factorial is n!=n\u00d7(n\u22121)!{\\displaystyle n!=n\\times (n-1)!}. When multiplying two factorials, the largest common factorial is the smaller of the two factorials, and you can factor out the largest common factor. The result of multiplying two factorials is the product of the two original factorials.",
+    "inference_time": 2.975167751312256,
+    "num_doc_tokens": 343
+  },
+  {
+    "url": "https://www.wikihow.com/Write-a-Speech-for-Someone-Else",
+    "gt_summary": "Get details about the speech. Ask for personal stories that you can use in the speech. Research the facts. Write the speech. Maintain a strong focus on the big ideas. Keep it brief. Ask the speaker to approve the speech.",
+    "pred_summary": "Ghostwriting a speech involves understanding the speaker's message, using rhetorical devices, and practicing presentation skills. The speech should be well-organized, easy to follow, and within the time limit given. The ghostwriter should also consider the speaker's personality and style when writing the speech.",
+    "inference_time": 2.3300256729125977,
+    "num_doc_tokens": 616
+  },
+  {
+    "url": "https://www.wikihow.com/Get-Clients",
+    "gt_summary": "Research the potential client before you contact them. Begin to write a statement customized to the client's needs. Begin with a hook that makes you stand out. Edit your statement until it is concise and clear. Once you have a statement prepared, find out who to contact and how to go about it. Be professional. Provide information to the potential client as you make your pitch.",
+    "pred_summary": "\n\nWhen trying to attract a potential client's attention, it's important to have a clear and concise pitch that highlights your unique skills and qualifications. You should also be prepared to provide additional information and follow up as needed. Finally, it's important to be professional and respectful in all interactions with the potential client, including dressing appropriately and using appropriate language.",
+    "inference_time": 2.822643518447876,
+    "num_doc_tokens": 701
+  },
+  {
+    "url": "https://www.wikihow.com/Chop-Food-Like-a-Pro",
+    "gt_summary": "Choose a cutting board. Use the right knife for the job. Keep the knife sharp.",
+    "pred_summary": "\n\nCutting boards can be made of wood, bamboo, or plastic, with wood having natural antiseptic properties that can help keep them clean. It is recommended to use a separate cutting board for meat and vegetables to avoid transferring bacteria between the two. Additionally, it is important to sharpen knives regularly to prevent them from becoming dull and slipping while in use, and to balance the blade if it has become bent.",
+    "inference_time": 3.4427127838134766,
+    "num_doc_tokens": 428
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Smoothies-Thicker",
+    "gt_summary": "Use frozen fruit to thicken the smoothie. Add avocado for a creamy texture. Try mango for a refreshing flavor. Increase your potassium with a banana. Boost the richness with pumpkin puree.",
+    "pred_summary": "\nFrozen fruits are a great alternative to fresh ones, and avocados, mango, bananas, and pumpkin puree are all good options to add to smoothies for a creamy and flavorful drink. Avocados add creaminess and thickness, while mango adds sweetness and a tropical flavor. Bananas are a common ingredient in smoothies and add potassium and fiber, while pumpkin puree adds a fall-inspired taste and thickness.",
+    "inference_time": 3.8703489303588867,
+    "num_doc_tokens": 391
+  },
+  {
+    "url": "https://www.wikihow.com/Organize-Pok%C3%A9mon-Cards",
+    "gt_summary": "Locate the symbol. Separate your cards by set symbol and number. Look for \"secret rare\" cards. Collect promotional cards together. Place cards in your storage container.",
+    "pred_summary": "\n\nPok\u00e9mon cards have a set symbol located below the Pok\u00e9mon's image. This symbol identifies the set that the card belongs to. Cards are organized by set number, and within sets, cards are organized by card number.",
+    "inference_time": 1.8510205745697021,
+    "num_doc_tokens": 656
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Claims-Against-a-Moving-Company-for-Damages",
+    "gt_summary": "Review your written contract with the moving company. Determine the type of liability insurance you purchased through the moving company. Contact the moving company and let them know you are filing a claim.",
+    "pred_summary": "\n\nAll moving companies in the United States are required to have a dispute resolution process and provide a written contract that contains key information for the customer. Your contract with the moving company should contain specific information such as estimates, order of service, Bill of Lading, inventory list, and liability insurance. Once you have collected information on the damaged goods and reviewed your contract with the moving company, you should contact the moving company and let them know you intend to file a claim for partial or full value of the damaged goods.",
+    "inference_time": 3.8829073905944824,
+    "num_doc_tokens": 695
+  },
+  {
+    "url": "https://www.wikihow.com/Conceive-a-Girl",
+    "gt_summary": "Determine what you are willing to spend on sex selection. Discuss options with your doctor very carefully. Pursue sperm sorting techniques with a clinic. Look into the \"swim up\" method of artificial insemination. Pursue preimplantation genetic diagnosis (PGD).",
+    "pred_summary": "\n\nWhile there are several methods to choose the sex of your baby, they are expensive, risky, or unavailable.  The most foolproof method is medical procedures, but they can be costly and invasive. Side-effects from these procedures tend to be mild, but they are relatively new and involve a certain amount of risk.",
+    "inference_time": 2.55208420753479,
+    "num_doc_tokens": 554
+  },
+  {
+    "url": "https://www.wikihow.com/Calculate-Quilt-Binding-Fabric-Requirements",
+    "gt_summary": "Identify the fabric width. Divide the perimeter plus 10 inches (25\u00a0cm) by the fabric width. Round up the result.",
+    "pred_summary": "\n\nFabric widths are typically 45 inches (110 cm) or 60 inches (150 cm). To determine the number of strips you need for binding, measure the perimeter of your fabric piece and add 10 inches (25 cm), then divide this number by the width of your binding fabric. If you get a non-whole number, round up to the nearest whole number.",
+    "inference_time": 3.162032127380371,
+    "num_doc_tokens": 245
+  },
+  {
+    "url": "https://www.wikihow.com/Dress-Up-That-Little-Black-Dress",
+    "gt_summary": "Choose the right shoes. Use jewelry to brighten up the little black dress. Add a belt to the black dress. Add a scarf. Select a suitable bag. Add headwear and hair accessories to the list of possible dress-ups for the little black dress.",
+    "pred_summary": "\nLittle black dresses are versatile and can be dressed up or down depending on the occasion. Shoes, jewelry, bags, and hats can all be used to add a unique and stylish touch to the dress. Accessorizing with high-quality items can make a significant difference in the overall look of the outfit.",
+    "inference_time": 2.824307680130005,
+    "num_doc_tokens": 3583
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Maple-Candy",
+    "gt_summary": "Stir for five minutes. Transfer the thickened maple syrup to the greased candy molds. Allow the maple candy to set.",
+    "pred_summary": "\nMaple syrup can be used to make candy by stirring it and letting it cool and set in molds. The maple candy will keep in airtight containers for up to a month. To make maple candy, you can use a wooden spoon to stir the cooled maple syrup for about five minutes, then add nuts to the mixture if desired.",
+    "inference_time": 2.8873496055603027,
+    "num_doc_tokens": 154
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Victoria-Sponge-Cake",
+    "gt_summary": "Bake the cakes for 20 to 25 minutes. Cool the cakes for 5 minutes before flipping them out onto a wire rack.",
+    "pred_summary": "\n\nBake the cakes in the middle rack of the preheated oven until the tops are golden brown and the sides pull away from the pan. Check the cakes by gently pressing the center and checking if it springs back immediately. After 5 minutes, remove the cakes from the pans and let them cool on a wire rack.",
+    "inference_time": 2.674405813217163,
+    "num_doc_tokens": 154
+  },
+  {
+    "url": "https://www.wikihow.com/Get-iFile",
+    "gt_summary": "Select the option to add the \u201copenappmkt\u201d app to your device when instructed by the prompt. Tap on \u201copenappmkt\u201d to launch the application, then execute a search for \u201ciFile. Select the option to download and install the official iFile app.",
+    "pred_summary": "\n\niFile is an iOS app that allows users to access and manage their device's file system without jailbreaking their device. The app is available for free on the App Store and can be installed on any iOS device running iOS 7 or later. If you encounter technical difficulties with installing iFile, you can consider installing similar apps such as iFileExplorer and Drop Copy.",
+    "inference_time": 2.8333985805511475,
+    "num_doc_tokens": 96
+  },
+  {
+    "url": "https://www.wikihow.com/Disappear-Completely",
+    "gt_summary": "Get rid of possessions you can\u2019t carry with you. Log off from all of your social media accounts. Clear the search information on your computer and phone. Give yourself a new name and background story. Throw away credit cards and anything else with your name on it.",
+    "pred_summary": "\n\nTo start fresh, you can sell off unnecessary items, delete online accounts, and leave behind items that can be used to identify you. To avoid being tracked, leave your phone and computer behind, and avoid using the Internet and social media. To protect your privacy, delete relevant files on your device and use a new persona when you're away.",
+    "inference_time": 2.637387275695801,
+    "num_doc_tokens": 778
+  },
+  {
+    "url": "https://www.wikihow.com/Start-an-Interesting-Conversation",
+    "gt_summary": "Seek out interesting people. Have more interesting experiences. Present yourself as non-threatening. Make a note of interesting things that happen to you. Stay current with news and events. Stay up-to-date with pop culture. Prepare for bad conversation.",
+    "pred_summary": "\nTo have a good conversation, find people who are interesting to you and share common interests. Current events, pop culture, and unique experiences are good conversation starters. If a conversation is not going well, politely excuse yourself and try to start another conversation with someone else.",
+    "inference_time": 2.0491511821746826,
+    "num_doc_tokens": 969
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Documentary",
+    "gt_summary": "Find a captivating, accessible subject. Do as much outside research as you can. Decide on an \"angle\" for your documentary. Get a camera, several microphones, and a few lights. Write out a shooting script for your documentary. Draft a budget and shooting schedule. Put together your crew.",
+    "pred_summary": "Documentaries are films about real-life subjects that require extensive research and planning to create. To make a documentary, you should start by choosing a captivating subject and conducting interviews with relevant people. Once you have gathered enough information, you can begin planning your shoot, including budgeting, scheduling, and hiring crew members.",
+    "inference_time": 2.583573341369629,
+    "num_doc_tokens": 1596
+  },
+  {
+    "url": "https://www.wikihow.com/Break-in-a-Pair-of-Sperry-Top-Siders-Quickly",
+    "gt_summary": "Make sure you buy your Top-Siders in the right size. Opt for leather over canvas or textile shoes for a more custom fit. Break in stiff, unyielding spots manually. Use leather conditioner to further soften and protect leather shoes. Remove sharp thread ends on the inside of the shoes to keep them from poking.",
+    "pred_summary": "\nMost Sperry footwear tends to be true-to-size, but it won't hurt to try on a pair on either side of the size you ordinarily wear, just to be sure. Sperry's sizing experts recommends buying leather shoes a half-size smaller than your normal size. Spend some time working problems areas like the toe box and the back of the heel by hand, and insert shoe trees into your Sperrys whenever you're not wearing them to prevent them from returning to their original manufactured shape.",
+    "inference_time": 4.3114094734191895,
+    "num_doc_tokens": 678
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Pancakes-Without-Baking-Powder",
+    "gt_summary": "Keep them in the oven at 200\u00a0\u00b0F (93\u00a0\u00b0C) if not serving immediately.",
+    "pred_summary": "\n\nPancakes should not be left in the oven for more than 30 minutes to avoid drying out. To keep warm pancakes in the oven, use an oven-safe container or baking sheet. Longer times can cause the pancakes to dry out, so it's important to monitor the time carefully.",
+    "inference_time": 2.55698299407959,
+    "num_doc_tokens": 62
+  },
+  {
+    "url": "https://www.wikihow.com/Write-in-Tri-Code",
+    "gt_summary": "Choose your message. Translate the first segment of you message. Encode your next segment. Continue taking segments three letters at a time. Maintain punctuation. Practice by writing in Tri Code regularly.",
+    "pred_summary": "\n\nThe Tri Code is a cipher that takes a message and breaks it into groups of three letters, each written in reverse. The message is then translated into a new language by rearranging the letters of each group. To write in Tri Code, start by breaking your message into groups of three letters, then write each group in reverse.",
+    "inference_time": 2.5083320140838623,
+    "num_doc_tokens": 560
+  },
+  {
+    "url": "https://www.wikihow.com/Change-Your-Home-Page",
+    "gt_summary": "Open  Google Chrome. Click \u22ee. Click Settings. Click Show home button. Select a home page option. Enter a URL if necessary.",
+    "pred_summary": "\n\nYou can customize your Google Chrome home page by clicking on the three dots in the top-right corner of the browser window, selecting \"Settings,\" and then clicking on \"Appearance.\" From there, you can choose between displaying a home button or entering a custom URL for your home page. If you choose to enter a custom URL, you can type in the address of the website you want to use as your home page and press Enter to save it.",
+    "inference_time": 3.3062644004821777,
+    "num_doc_tokens": 289
+  },
+  {
+    "url": "https://www.wikihow.com/Deal-With-the-Pain-of-a-Door-Being-Shut-on-Your-Finger",
+    "gt_summary": "Apply ice immediately. Elevate your finger. Check where the hand is injured. Make sure there\u2019s no injury to the nail bed. Follow the doctor\u2019s instructions on how to drain blood under the nail. Seek medical attention if necessary.",
+    "pred_summary": "\n\nIce your injured hand as soon as possible to slow down blood flow and reduce swelling. If you closed the door on your finger and didn't injure your joints or nail bed, you may be able to wait it out, but if you experience any signs of infection, you should seek medical attention. If the injury is severe, you may need to drain the blood or seek medical attention to prevent infection.",
+    "inference_time": 3.250199317932129,
+    "num_doc_tokens": 768
+  },
+  {
+    "url": "https://www.wikihow.com/Deal-With-Having-Bad-Teeth",
+    "gt_summary": "Talk to your dentist. Visit an orthodontist. Consider seeing a psychologist.",
+    "pred_summary": "\n\nIf you have issues with your teeth that are affecting your quality of life, you should see a dentist to discuss options for improving your teeth. You may be able to find low cost dental care at a dental school or through local programs. If you are worried about the cost of dental care, you can also see an orthodontist who can help with alignment issues.",
+    "inference_time": 2.967815637588501,
+    "num_doc_tokens": 378
+  },
+  {
+    "url": "https://www.wikihow.com/Be-Macho",
+    "gt_summary": "Be courteous and respectful to women Eat vegetables Drink responsibly. Drive safely. Have protected and responsible sex",
+    "pred_summary": "\nMacho guys are often associated with negative traits such as treating women poorly, objectifying them, and being rude. However, a true macho man treats all women with respect and courtesy. He also practices safe sex and moves at his own pace, rather than feeling the need to prove himself through promiscuity.",
+    "inference_time": 2.569465160369873,
+    "num_doc_tokens": 584
+  },
+  {
+    "url": "https://www.wikihow.com/Use-Toning-Shampoo",
+    "gt_summary": "Identify the tones in your hair that you want to correct. Select a corresponding color in the toning shampoo. Check the color depth and consistency of the shampoo.",
+    "pred_summary": "\nToning shampoos are available to help remove unwanted brassy tones from your hair. The color wheel can be used to determine the color pigment needed to neutralize the brassy tones in your hair. When choosing a toning shampoo, it's important to consider the color tones in your hair and the pigment needed to neutralize them.",
+    "inference_time": 2.972569704055786,
+    "num_doc_tokens": 624
+  },
+  {
+    "url": "https://www.wikihow.com/Hydrate-Skin",
+    "gt_summary": "Use a hydrating face mask 1-2 times per week.",
+    "pred_summary": "\n\nPaper and gel masks are available for purchase and can provide extra hydration to the skin. Hydrating masks are formulated to apply a layer of moisturizer directly to the skin and let it soak in for 15-20 minutes. Non-comedogenic masks are best for people with acne issues.",
+    "inference_time": 2.6509385108947754,
+    "num_doc_tokens": 120
+  },
+  {
+    "url": "https://www.wikihow.com/Put-Griptape-on-a-Skateboard",
+    "gt_summary": "Scrape the sides. Use a knife or a box cutter to trim off any excess tape. Flatten out air bubbles. Poke holes to screw the trucks on. Neaten up the edges. Add any last-minute stylistic touches.",
+    "pred_summary": "\n\nTo properly tape a skateboard, you will need to scrape the edges of the grip tape to seal them, use a blade to cut along the sides of the board, and make sure to poke holes for the truck screws. It is important to use a second board as a guide for poking the holes and to trim any excess tape with a knife or razor blade. Additionally, you can add designs or patterns to the grip tape using paint markers or sharpies.",
+    "inference_time": 4.0095789432525635,
+    "num_doc_tokens": 857
+  },
+  {
+    "url": "https://www.wikihow.com/Floss",
+    "gt_summary": "Start at the top center, then do each side. Slide the dental floss between your teeth as far down as it goes. Curve the floss into a c-shape around your tooth. Make 8 to 10 strokes with the floss on each side of the tooth. Move to a new section of floss for each tooth. Don't forget the backs of your rear molars. Floss your bottom teeth after you finish your top teeth. Rinse your mouth out with a mouthwash or water when you're done flossing.",
+    "pred_summary": "\nFlossing is a crucial part of oral hygiene that helps remove food debris and plaque from between teeth and below the gum line. To floss effectively, start by placing the floss between your front teeth and work your way down to the bottom of your mouth, making several passes along each tooth. After flossing, rinse your mouth with water to remove any remaining particles and feel a fresh and clean.",
+    "inference_time": 3.2813563346862793,
+    "num_doc_tokens": 686
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Venn-Diagram",
+    "gt_summary": "Use a Venn diagram to show relationships. Make a \"universe. Pick two classifications. Add information to your classifications. Establish what overlaps. Redraw your circles. Fill in each circle. Fill in the overlapped section. Add a third classification.",
+    "pred_summary": "\nVenn diagrams show where things intersect by using overlapping circles. In the example, two circles represent \"Foods Eaten in the Morning\" and \"Foods Eaten at Night,\" while a third circle represents \"Foods Eaten Midday.\" The overlap between the two circles shows the shared items between the two categories.",
+    "inference_time": 2.617086172103882,
+    "num_doc_tokens": 710
+  },
+  {
+    "url": "https://www.wikihow.com/Entertain-People",
+    "gt_summary": "Make sure you don\u2019t run out of drinks. Have enough food ready. Put out a few conversational pieces. Create mingling activities. Be a friendly host. Introduce people to each other. Don\u2019t clean up until people leave. Consider having a theme.",
+    "pred_summary": "\n\nParty planning involves many elements to ensure that your guests have a good time. This includes having enough booze, food, and snacks, as well as some entertaining pieces such as games, activities, or a photo album. Another important aspect of party planning is creating a welcoming environment for your guests, which includes making sure they know where everything is and feeling comfortable.",
+    "inference_time": 2.856163740158081,
+    "num_doc_tokens": 1494
+  },
+  {
+    "url": "https://www.wikihow.com/Remove-iCloud-from-an-iPhone",
+    "gt_summary": "Locate the iCloud Drive app. Tap and hold on the iCloud Drive app. Tap \u24e7. Tap Remove.",
+    "pred_summary": "\n\nApple's iCloud Drive app has been removed from the iPhone. To remove it, tap and hold the iCloud Drive app until it starts to wiggle. Then, tap the \"X\" in the upper-left corner of the app to remove it.",
+    "inference_time": 2.0215797424316406,
+    "num_doc_tokens": 57
+  },
+  {
+    "url": "https://www.wikihow.com/Download-Applications-to-Your-iPod-Touch",
+    "gt_summary": "Make sure you're connected to the Internet. Launch the App Store. Search for the app you want to download, or browse the featured apps or categories. Click on an app that looks interesting. If you would like to download the app, tap the blue button with the small plus sign in the top corner. The button will turn green and read \"Install App\". Enter your password. Wait for your app to download.",
+    "pred_summary": "\n\nTo connect to a Wi-Fi network on your iPhone, go to Settings > Wi-Fi and select the network you want to connect to. If the network is password-protected, enter the password at the prompt. If you don't have a network or there isn't an unprotected one nearby, you can buy an inexpensive Wi-Fi router to hook up to your modem.",
+    "inference_time": 2.930492639541626,
+    "num_doc_tokens": 166
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Eyeshadow-at-Home",
+    "gt_summary": "Buy a selection of mica powders.",
+    "pred_summary": "\nCosmetic mica powder is a fine mineral powder available in various colors, with or without shimmer, and different size quantities. It can be used to create unique and unusual eyeshadow shades by blending different colors together. When purchasing mica powder, make sure it is for cosmetic use and safe to use near the eyes.",
+    "inference_time": 2.74295711517334,
+    "num_doc_tokens": 121
+  },
+  {
+    "url": "https://www.wikihow.com/Block-YouTube-Channels-on-Android",
+    "gt_summary": "Open the YouTube app. Tap your profile icon. Tap Settings. Tap General. Scroll down tap the toggle switch  next to \"Restricted Mode\".",
+    "pred_summary": "\n\nYouTube app icon: The icon for the YouTube app resembles a red TV screen with a white play triangle in the middle. Tapping the icon will open the YouTube app. The Account menu is the third option from the bottom of the Account menu, next to a gear icon.",
+    "inference_time": 2.1453661918640137,
+    "num_doc_tokens": 196
+  },
+  {
+    "url": "https://www.wikihow.com/Treat-Dehydration",
+    "gt_summary": "Use an oral rehydration solution. Avoid other fluids. Breastfeed an infant. Maintain hydration. Check the child\u2019s urine.",
+    "pred_summary": "\n\nOral rehydration solutions such as Pedialyte are recommended for treating mild to moderate dehydration in children. The solution should be given in small amounts every few minutes, starting with 1-2 teaspoons, and gradually increased as the child becomes more hydrated. The American Academy of Pediatrics recommends using commercial electrolyte solutions, avoiding milk and clear broths, and monitoring the child's urine color to ensure proper rehydration.",
+    "inference_time": 3.93548321723938,
+    "num_doc_tokens": 731
+  },
+  {
+    "url": "https://www.wikihow.com/Wear-a-Face-Shield",
+    "gt_summary": "Use a face shield for contact sports. Wear a face shield to avoid flying debris. Use a face shield when working with splash hazards. Wear a face shield to protect yourself from extreme heat. Use a face shield to avoid arc hazards.",
+    "pred_summary": "\n\nHockey, lacrosse, and football players should wear face shields to protect themselves from pucks or balls, collisions with other players, and debris. Softball and baseball catchers should also wear face masks to protect themselves from the ball or bat. When working with power tools, dangerous liquids, or high voltage connections, it is important to wear a face shield to protect oneself from flying debris, chemicals, and extreme heat.",
+    "inference_time": 3.536566972732544,
+    "num_doc_tokens": 277
+  },
+  {
+    "url": "https://www.wikihow.com/Draw-a-Lizard",
+    "gt_summary": "Get some reference images. Sketch the body shapes. Connect the shapes. Draw the outline and details. Add the eyes and nose. Draw the neck and front leg structure. Add in the back legs. Add other body details. Clean up your drawing. Color your lizard.",
+    "pred_summary": "\n\nYou will want to draw a rounded teardrop shape for the head and another rounded teardrop shape for the body. You will then attach the two shapes with a neck guide. Next, you will sketch out the shape of the face and head structure, including the under-bite, jaw line, eye, nose hole, and definition around the head and neck.",
+    "inference_time": 2.757789134979248,
+    "num_doc_tokens": 326
+  },
+  {
+    "url": "https://www.wikihow.com/Weld-Galvanized-Steel",
+    "gt_summary": "Get a welding mask, respirator, welding gloves, and apron. Use a fume extractor or set up a fan directly next to your welding site. Ground your welder by placing the claw over the clamp or work surface.",
+    "pred_summary": "\n\nWelding galvanized steel can be dangerous due to the zinc coating, which releases toxic fumes when heated. To minimize exposure, wear protective gear such as a welding mask, respirator, and gloves, and set up a fume extractor or fans to ventilate the area. Grounding the object being welded is also important to prevent electrical shocks.",
+    "inference_time": 3.2240548133850098,
+    "num_doc_tokens": 562
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Vodka-Sauce",
+    "gt_summary": "Stir the tomato puree into the pan. Mix the cream into the sauce. Season the sauce with salt, pepper, and red pepper flakes.",
+    "pred_summary": "\n\nThe vodka, onion, and garlic mixture is cooked for a few minutes before adding tomato puree and heavy cream. The cream is fully incorporated into the sauce before seasoning it with salt, black pepper, and crushed red pepper flakes. The sauce is then ready to use as a base for pasta or other dishes.",
+    "inference_time": 2.9283447265625,
+    "num_doc_tokens": 368
+  },
+  {
+    "url": "https://www.wikihow.com/Impress-a-Classmate",
+    "gt_summary": "Be friendly. Be good at something. Be confident in trying new things. Keep cool under pressure. Ask your classmate about his or her interests. Give a compliment.",
+    "pred_summary": "\nThe article suggests ways to make a good impression on classmates, such as being kind, friendly, and showing genuine interest in others. It also advises against bragging about oneself and instead complimenting others when they do something well. By following these tips, one can stand out as a positive influence in the classroom.",
+    "inference_time": 2.5248076915740967,
+    "num_doc_tokens": 848
+  },
+  {
+    "url": "https://www.wikihow.com/Treat-Vaginal-Prolapse",
+    "gt_summary": "Avoid heavy lifting and other similar activities while you recover. Consider weight loss to prevent recurrence of your prolapse. Be aware of your expected recovery from vaginal prolapse.",
+    "pred_summary": "\n\nTo ensure a full recovery after vaginal prolapse surgery, it is important to avoid heavy lifting and stressful activities for six to nine weeks. Additionally, following your doctor's advice on when to begin strengthening exercises and how many to do at a time can help minimize stress on the pelvic area. If you are overweight or obese, losing weight can significantly reduce the risk of recurrence of the condition following surgery.",
+    "inference_time": 3.3580288887023926,
+    "num_doc_tokens": 551
+  },
+  {
+    "url": "https://www.wikihow.com/Use-Your-TV-as-a-Second-Monitor-for-Your-Computer",
+    "gt_summary": "Find your computer's video output port. Find your TV's video input options. Determine whether or not you need an adapter. Buy any adapters and cables that you need. Plug one end of the cable into your computer. Plug the other end of the cable into your TV. Connect an audio cable if necessary. Turn on the TV. Switch your TV to the correct input. Wait for your computer's screen to appear.",
+    "pred_summary": "\nMost computers have at least one video output port, such as HDMI, DisplayPort, or VGA. The port you use will depend on the type of computer and TV you have. If your TV has an HDMI port, try to prioritize it, as it is the most common and versatile port type.",
+    "inference_time": 2.5047008991241455,
+    "num_doc_tokens": 883
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Good-Facebook-Profile-Picture",
+    "gt_summary": "Crop your picture. Keep the color saturation low. Brighten your photo.",
+    "pred_summary": "\n\nFacebook requires profile pictures to be square and of a specific size. Before uploading a photo, you can edit it to ensure it looks good at the required size and has the right color balance. If the photo is too dark, take another one in better lighting.",
+    "inference_time": 2.0312230587005615,
+    "num_doc_tokens": 175
+  },
+  {
+    "url": "https://www.wikihow.com/Turn-On-an-Android-Phone",
+    "gt_summary": "Remove your phone's back casing. Pop out the old battery. Put in the new battery. Replace your phone's back casing. Properly dispose of the old battery. If all else fails, call your carrier.",
+    "pred_summary": "\n\nTo ensure the safe handling of lithium ion batteries, it is important to avoid exposing them to water, impact, or heat. If you suspect the battery may be the problem, try replacing it with a spare. Additionally, lithium ion batteries must be disposed of through recycling or at a household hazardous waste facility.",
+    "inference_time": 2.671743154525757,
+    "num_doc_tokens": 174
+  },
+  {
+    "url": "https://www.wikihow.com/Communicate-With-a-Deaf-Person-Through-an-Interpreter",
+    "gt_summary": "Ask the deaf person if she has any last questions or concerns. Thank the interpreter for her work. Follow up with the deaf person and the interpreter.",
+    "pred_summary": "\n\nYou should thank the interpreter after the meeting is over and she has fulfilled her duties. If you hired the interpreter, you should thank her formally for her work once the conversation is over. You should also ask the deaf person if she found the interpreter\u2019s service useful and helpful and provide feedback to the interpreter or to the referral service for the interpreter.",
+    "inference_time": 2.658310890197754,
+    "num_doc_tokens": 383
+  },
+  {
+    "url": "https://www.wikihow.com/Attract-Good-Men",
+    "gt_summary": "Respect yourself. Be confident. Take things slow. Be yourself.",
+    "pred_summary": "\n\nThe most important thing in finding a good guy is to respect yourself and believe that you deserve a good guy. Stop beating yourself up and stop allowing people to walk all over you. Dress nicely and be confident, speak your mind, and avoid seeming shy.",
+    "inference_time": 2.100811004638672,
+    "num_doc_tokens": 342
+  },
+  {
+    "url": "https://www.wikihow.com/Freeze-Herbs",
+    "gt_summary": "Be aware that most herbs will not freeze in a way that retains their former glory. Collect herbs after the dew has dried from them. Prepare the herbs before freezing. Select a method for freezing based on one of the following.",
+    "pred_summary": "\nHerbs can be frozen to preserve them for later use, but it's important to prepare them properly before freezing. This includes removing dirt and insects, washing them gently if necessary, and allowing them to dry completely before freezing. Herbs should be frozen within two months for optimal flavor retention.",
+    "inference_time": 2.483934164047241,
+    "num_doc_tokens": 495
+  },
+  {
+    "url": "https://www.wikihow.com/Recognize-Games-in-a-Relationship",
+    "gt_summary": "Be yourself Be honest Be clear about what the expectations are. Give each other permission to make mistakes. Learn to give and to receive. Make it clear: Understand we all have yearnings and desires.",
+    "pred_summary": "\n\nHonesty is key to a healthy relationship, as it allows individuals to acknowledge and work through their mistakes and imperfections. Being honest with oneself and others is crucial, but it can be difficult to do so due to fear of judgment. By being open and honest with each other, individuals can build trust and create a relationship that is based on mutual respect and understanding.",
+    "inference_time": 2.9030420780181885,
+    "num_doc_tokens": 501
+  },
+  {
+    "url": "https://www.wikihow.com/Have-Soft-Shiny-Hair-Inexpensively",
+    "gt_summary": "Have a stylist trim your ends every 4-8 weeks. Brush your hair the right way. Practice eating healthy.",
+    "pred_summary": "\n\nHair brushing is an essential part of hair care, but it's important to brush your hair correctly to avoid damaging it. Brushing your hair when it's dry with a boar bristle brush is best, and it's important to avoid over-brushing, which can cause damage and breakage. Eating a healthy diet rich in fruits, vegetables, and protein can also help improve the health and appearance of your hair.",
+    "inference_time": 3.5264289379119873,
+    "num_doc_tokens": 402
+  },
+  {
+    "url": "https://www.wikihow.com/Stop-Underarm-Odor",
+    "gt_summary": "See a doctor. Shave your armpits. Use a homemade hydrogen peroxide solution. Avoid tobacco. Apply witch hazel or white vinegar to your underarms. Use an alum rock.",
+    "pred_summary": "\n\nDoctors can help you eliminate severe armpit odor by prescribing stronger antiperspirants or performing more extreme surgeries like superficial liposuction curettage or open surgery. Shaving your armpits and using hydrogen peroxide solution can also help reduce odor. Additionally, avoiding tobacco and using special bath gloves, body wash, and alum rock can help eliminate body odor.",
+    "inference_time": 3.4682817459106445,
+    "num_doc_tokens": 415
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Hina-Matsuri-Dolls",
+    "gt_summary": "Cut the body and head from white cardstock. Cut paper for a collar. Fold the collar paper around the body. Create an edge on the primary chiyogami paper. Attach the body to the kimono. Fold the left corner over. Fold in the rest of the left side. Repeat with the right side. Cut a piece of paper for the obi. Fold the obi around the kimono. Cut a piece of paper for the obijime. Fold the obijime over the obi. Attach the head to the body. Create hair from black cardstock. Adhere the hair to the head. Step back and admire your work.",
+    "pred_summary": "\n\nTo make a Hina Matsuri doll, start by cutting out a small head and body from white or ivory cardstock using a sharp pair of scissors. Next, fold a piece of chiyogami paper in half and use it to create the collar of the doll, and then attach it to the body. Finally, use another piece of chiyogami paper to create the obi and obijime, and attach them to the body as well.",
+    "inference_time": 3.669286012649536,
+    "num_doc_tokens": 1909
+  },
+  {
+    "url": "https://www.wikihow.com/Reflash-Your-BIOS",
+    "gt_summary": "Use the self-contained WinFlash program to flash your BIOS. Download the WinFlash executable from the manufacturers' website. Double-click on the executable to run the WinFlash program. Follow the on-screen instructions.",
+    "pred_summary": "\n\nTo update the BIOS on your computer, you can check the manufacturer's website for a BIOS update using the exact model of your computer. You can download the executable for your computer model and save it to your desktop. Before rebooting your computer, make sure you follow any instructions provided by the utility.",
+    "inference_time": 2.311131715774536,
+    "num_doc_tokens": 118
+  },
+  {
+    "url": "https://www.wikihow.com/Cure-Astigmatism",
+    "gt_summary": "Get a referral for a specialist eye clinic from your optometrist. Learn the possible risks of laser eye surgery. Allow the eye surgeon to perform laser eye surgery. Recover",
+    "pred_summary": "\nLaser eye surgery is a procedure that uses a laser to reshape the cornea of your eye to correct astigmatism. The cost of the surgery can range from $300 to $4,000 per eye and may not be covered by insurance. Most people can drive and return to work 1-2 days after surgery, but it may take several weeks for issues like dry eyes, double vision, and glare to clear up completely.",
+    "inference_time": 3.536954879760742,
+    "num_doc_tokens": 446
+  },
+  {
+    "url": "https://www.wikihow.com/Eat-Less-Fiber",
+    "gt_summary": "Consume less than the recommended amounts of fiber daily. Minimize fiber in meals and snacks. Limit insoluble fiber. Minimize fiber-fortified foods. Discontinue fiber supplements. Write up a meal plan.",
+    "pred_summary": "\nThe recommended daily fiber intake varies by gender, with women needing 25 grams and men needing 38 grams. If you are experiencing discomfort or health issues due to high fiber intake, you may need to reduce your fiber intake. A meal plan can help you track your daily fiber intake and make substitutions to limit fiber if necessary.",
+    "inference_time": 3.0931246280670166,
+    "num_doc_tokens": 946
+  },
+  {
+    "url": "https://www.wikihow.com/Stain-Veneer",
+    "gt_summary": "Apply a pre-stain conditioner and let it set up for 1 to 5 minutes. Apply water stain with a cloth, synthetic bristle brush, paint pad or foam brush, following the grain of the wood. Apply second coat of stain, if needed, once the 1st coat has set up, usually 2 hours. Wait at least 3 hours before applying a sealer coat if desired.",
+    "pred_summary": "\n\nStain conditioner is necessary when using a water-based stain on wood. It helps the stain penetrate the wood evenly and can be applied with a clean cloth after wiping off excess. The conditioner should be allowed to penetrate the wood for no more than 3 minutes before wiping off excess.",
+    "inference_time": 2.5447378158569336,
+    "num_doc_tokens": 68
+  },
+  {
+    "url": "https://www.wikihow.com/Rotate-Your-Computer-Screen",
+    "gt_summary": "Click the Apple menu and select \"System Preferences\". Click the \"Displays\" option. Select your external display. Set the \"Rotation\" menu to the option you want in the \"Display\" tab. Check that mirroring is not enabled. Attempt to rotate a built-in monitor (OS 10.9 and below).",
+    "pred_summary": "\n\nTo rotate an external display on a Mac, you can only rotate the external display, and it must support rotations. In older versions of OS X, you can try forcing a built-in display to rotate by opening a special version of the Displays menu, but this is not recommended in newer versions of OS X. If you want to rotate an internal display, such as on a MacBook or iMac, you will need to use a different method.",
+    "inference_time": 3.3349480628967285,
+    "num_doc_tokens": 303
+  },
+  {
+    "url": "https://www.wikihow.com/Register-a-UPC-Code",
+    "gt_summary": "Go to www.gs1-us.org and click \u201cApply Now. Fill out the application. Pay the required fees. Be wary of purchasing codes through a secondary market.",
+    "pred_summary": "\n\nYou can apply for a UPC code through GS1, a non-profit organization, by logging onto their website and completing an application. The application will require personal information and business projections, and there will be fees associated with obtaining the code. There are also internet-based companies that sell UPC codes at a lower price, but these codes will not include your company's Company Prefix and may not be suitable for selling products through major retailers.",
+    "inference_time": 3.6231040954589844,
+    "num_doc_tokens": 347
+  },
+  {
+    "url": "https://www.wikihow.com/Get-Free-Music-for-an-Mp3-Player",
+    "gt_summary": "Open Audio Archive. Click the search bar. Search for music. Select a song to download. Scroll down to the \"DOWNLOAD OPTIONS\" heading. Click the VBR MP3 option.",
+    "pred_summary": "\n\nTo download music from the Internet Archive, go to the website and enter the name of a song or artist in the search bar. From the song's page, click the \"DOWNLOAD OPTIONS\" link to initiate the download of the MP3 file. The file will begin downloading to your computer, and you may need to confirm the download or select a save location.",
+    "inference_time": 2.8084959983825684,
+    "num_doc_tokens": 130
+  },
+  {
+    "url": "https://www.wikihow.com/Be-a-Loner-in-High-School",
+    "gt_summary": "Be a survivor. Change your behaviors if you are lonely. Watch out for the stereotypes. Don\u2019t give in to peer pressure. Talk to the school counselor. Talk to your parents. Talk to a medical professional.",
+    "pred_summary": "\n\nThe text suggests that being a loner in high school can have both positive and negative consequences. While it may provide time for introspection and personal growth, it can also lead to social isolation and negative stereotypes. It is important for loners to be aware of these potential outcomes and to seek help if they are unhappy or struggling with negative emotions.",
+    "inference_time": 2.783716917037964,
+    "num_doc_tokens": 664
+  },
+  {
+    "url": "https://www.wikihow.com/Recover-from-Food-Poisoning-Fast",
+    "gt_summary": "Drink barley or rice water. Take some probiotic supplements. Take some apple cider vinegar. Use herbs. Soothe your stomach with honey and ginger.",
+    "pred_summary": "\nProbiotics, apple cider vinegar, basil, cumin, thyme, rosemary, coriander, sage, spearmint, and fennel are some of the home remedies that can help alleviate the symptoms of food poisoning. Ginger and honey tea can also help to reduce stomach pain and indigestion. It is important to consult a doctor before taking any of these remedies, especially if you have a weak immune system.",
+    "inference_time": 3.824651002883911,
+    "num_doc_tokens": 377
+  },
+  {
+    "url": "https://www.wikihow.com/Wear-High-Waisted-Shorts",
+    "gt_summary": "Go for flats or flat sandals. Dress things up with a pair of heels. Go casual and chic with a wedge heel.",
+    "pred_summary": "\nFlat sandals or basic flats are perfect for a casual summer look with high-waisted shorts. Sandals or flats made of leather can add a dressier look. For a night out, silk high-waisted shorts can be paired with heels for a bold look.",
+    "inference_time": 2.3049612045288086,
+    "num_doc_tokens": 266
+  },
+  {
+    "url": "https://www.wikihow.com/Poach-Fish-in-Milk",
+    "gt_summary": "Assemble your ingredients. Cover the pan and microwave the fish. Finish microwaving the fish and check to see if it's done.",
+    "pred_summary": "\n\nThe recipe calls for two skinless fish fillets, which are placed in a shallow baking dish filled with whole milk and salt. After microwaving for 3 minutes, the fish is removed and allowed to rest before being microwaved again for another minute. The fish is checked to see if it is finished, and if not, it is microwaved for another 30 seconds.",
+    "inference_time": 3.058668851852417,
+    "num_doc_tokens": 303
+  },
+  {
+    "url": "https://www.wikihow.com/Clean-Jeans",
+    "gt_summary": "Allow the jeans to soak for 30 minutes to an hour. Hang your jeans up to dry overnight.",
+    "pred_summary": "\n\nJeans can be cleaned using a simple soap and water mixture. Swirl the jeans around in the mixture until suds form, then soak them for up to an hour before hanging them up to dry. After drying, the jeans may be stiff, so wear them for 20-30 minutes to loosen them up.",
+    "inference_time": 2.70154070854187,
+    "num_doc_tokens": 94
+  },
+  {
+    "url": "https://www.wikihow.com/Become-a-Witch-on-Sims-2",
+    "gt_summary": "Type in \"boolprop testingcheatsenabled true\" while in the neighborhood screen (type it in without the quotations). SHIFT+CLICK on the the mailbox of the desired family. Go to spawn 'NPC. When the witch spawns, shift-click her and press \"MAKE SELECTABLE\" then click your Sim (not shift-click) and go to 'cast spell.",
+    "pred_summary": "\n\nA Sim can become a witch/warlock by using the \"Grand Witch/Warlock\" aspiration and clicking on the \"Magus Mutatio\" option. This will give the Sim the witch/warlock trait and allow them to use magic. The specific alignment of the witch/warlock (good, evil, or neutral) will depend on the player's choice.",
+    "inference_time": 2.9942331314086914,
+    "num_doc_tokens": 42
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Body-Oil",
+    "gt_summary": "Find small, dark glass bottles to store your oil. Choose an essential oil for a top note. Decide on a middle note. Select a base note. Pick a carrier oil. Check for allergic reactions",
+    "pred_summary": "\n\nTo make a simple body oil with essential oils, choose a top note, middle note, and base note that you want to combine. Dilute each essential oil with a carrier oil before applying it to your skin, and conduct a patch test before using it. Store your oils in dark glass bottles with tight caps or corks to preserve them.",
+    "inference_time": 2.734158992767334,
+    "num_doc_tokens": 767
+  },
+  {
+    "url": "https://www.wikihow.com/Add-Files-to-Google-Drive-Online",
+    "gt_summary": "Open Google Drive. Click NEW. Select an upload option. Select your file(s) or folder. Click Open. Wait for the file(s) or folder to upload. Organize your files.",
+    "pred_summary": "\n\nYou can upload files to Google Drive by going to the Google Drive webpage, logging into your Google Account, and clicking the File upload or Folder upload option. Once you select the files or folder you want to upload, they will be uploaded to Google Drive and can be accessed from any internet-connected device. After the files have been uploaded, you can organize them by moving them into folders or removing unnecessary files by right-clicking and removing them.",
+    "inference_time": 3.3352277278900146,
+    "num_doc_tokens": 417
+  },
+  {
+    "url": "https://www.wikihow.com/Practice-Minimalism-As-a-Family",
+    "gt_summary": "Discuss the importance of minimalism as a family. Identify the areas of your home that could be minimized. Assess your personal possessions. Examine your family\u2019s daily schedule.",
+    "pred_summary": "\nMinimalism is a lifestyle change that can benefit families by saving money, simplifying daily routines, and creating more space for relaxation and enjoyment. Families can start by discussing the importance of minimalism together, identifying areas in their home that could use a minimalist treatment, and creating a list of personal possessions they are willing to give away or sell. By reducing the amount of time spent on draining activities and simplifying their schedules, families can enjoy more quality time together and improve their overall well-being.",
+    "inference_time": 4.0220396518707275,
+    "num_doc_tokens": 612
+  },
+  {
+    "url": "https://www.wikihow.com/Act-More-Mature-in-Daily-Surroundings",
+    "gt_summary": "Think through your decisions so you don\u2019t act impulsively. Work on controlling your anger or frustration so you don\u2019t act out. Take responsibility for your actions if you make a mistake. Stay positive and optimistic to help you through hard times. Keep an open mind so you don\u2019t judge others. Act humble so you don\u2019t seem jealous of other people.",
+    "pred_summary": "\nWhenever you're given multiple choices, take a moment to consider each option's pros and cons and think about what you want to achieve. Ask someone you trust for advice if you're unsure, and be firm in your decisions so you don't fall victim to peer pressure. When you're angry or frustrated, take a few deep breaths to calm down before addressing the situation.",
+    "inference_time": 3.0819528102874756,
+    "num_doc_tokens": 857
+  },
+  {
+    "url": "https://www.wikihow.com/Solve-the-Light-Puzzle-in-Silent-Hill",
+    "gt_summary": "Head over to the elevator and take it to the 3rd floor. Exit the elevator.",
+    "pred_summary": "\n\nAlessa is seen praying at an altar in a ghostly image after obtaining the Hagith key. The altar holds two paintings that are the clue to unlocking the doors on either side of the corridor. Solving the puzzle will allow you to progress through the game.",
+    "inference_time": 2.394008159637451,
+    "num_doc_tokens": 68
+  },
+  {
+    "url": "https://www.wikihow.com/Walk-With-a-Blind-Person",
+    "gt_summary": "Have the blind person hold your arm just above the elbow. Make sure the blind person is a half step to a step behind you. Have the blind person walk behind you in narrow spaces. Let the blind person know if you need to switch sides.",
+    "pred_summary": "\nBlind people should hold the back of your hand to help them figure out where your arm is, and then hold your arm just above the elbow. You should keep a pace you are both comfortable with and periodically ask the blind person if they want to move faster or slower. Let the blind person know about obstacles and adjust how you walk when encountering narrow spaces.",
+    "inference_time": 2.719038486480713,
+    "num_doc_tokens": 427
+  },
+  {
+    "url": "https://www.wikihow.com/Get-Burnt-Popcorn-Smell-out-of-the-Microwave",
+    "gt_summary": "Do a steam-clean process with vinegar. Pour vinegar and baking soda on a sponge and clean the microwave. Use a scrub brush.",
+    "pred_summary": "\n\nMicrowaves can get burnt popcorn smell out of their interiors by using equal parts water and white vinegar in a bowl in the microwave for 3 minutes, followed by a towel or cloth wipe down. For more stubborn smells, a sponge or scrub brush with a vinegar and baking soda mixture can be used. These methods will leave a vinegary scent behind that will dissipate after a couple of days.",
+    "inference_time": 3.7469842433929443,
+    "num_doc_tokens": 286
+  },
+  {
+    "url": "https://www.wikihow.com/Solder",
+    "gt_summary": "Learn what soldering is. Use solder to bind things. Use a soldering iron to heat the solder. Use other equipment to assist in soldering. Turn on the lights. Prepare adequate ventilation. Don't solder for too long in one sitting.",
+    "pred_summary": "\nSoldering is the process of melting a metal onto other metal components to bind them together. It is different from welding as it uses a softer metal with a lower melting point to connect components, making it useful for more delicate applications. Soldering involves heating a metal alloy, called solder, until it melts and bonds with the other components, and it can be used to fill in gaps or hold pieces in place.",
+    "inference_time": 3.439431667327881,
+    "num_doc_tokens": 891
+  },
+  {
+    "url": "https://www.wikihow.com/Cut-Guinea-Pig-Claws",
+    "gt_summary": "Choose a leg and gently pull it out. Secure one of his/her nails. Pick up the nail clippers with your other hand. Identify the quick in the nail. Trim the nail. Proceed with trimming the rest of your guinea pig's nails. Put your guinea pig back in his/her cage and tidy up the nail trimmings.",
+    "pred_summary": "Guinea pigs will wiggle when you trim their nails, so be patient and don't squeeze too tightly. Use styptic powder or cornstarch to stop any bleeding if you cut the quick. Trim one nail at a time and give your guinea pig a treat after each nail to provide positive reinforcement. ",
+    "inference_time": 2.732405185699463,
+    "num_doc_tokens": 549
+  },
+  {
+    "url": "https://www.wikihow.com/Whiten-Yellowed-Pillows",
+    "gt_summary": "Change pillowcases and bedding once per week. Use linen spray. Machine wash pillows at least twice per year. Go to bed with a clean face and hair.",
+    "pred_summary": "\n\nPillows should be washed every 3-6 months, depending on body composition and sleep habits. Changing pillowcases and bedding at least once a week can help keep your pillows clean and fresh. Regularly using linen spray can help prevent mold and mildew buildup and promote relaxation.",
+    "inference_time": 2.5775535106658936,
+    "num_doc_tokens": 491
+  },
+  {
+    "url": "https://www.wikihow.com/Determine-the-Sex-of-African-Grey-Parrots",
+    "gt_summary": "Consider the body. Examine coloration. Examine tail feathers. Check the wings.",
+    "pred_summary": "\nMale African Greys tend to be slightly larger than females, with rounder heads and shorter necks. Females have longer necks and larger heads. Ventral feathers are another way to tell the difference, with males having solid red feathers and females having edged feathers.",
+    "inference_time": 2.128048896789551,
+    "num_doc_tokens": 488
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Plastic-Bag-Poncho-for-Your-Dog",
+    "gt_summary": "Choose a small garbage sized plastic bag. Gather the rest of the supplies. Find an open area.",
+    "pred_summary": "\n\nTo make a plastic poncho for your dog, you will need a garbage bag, scissors, and a marker. Measure the bag against your dog's body to determine the right size and cut it out. Use the scissors to cut the bag and the marker to mark the area where you will cut the bag.",
+    "inference_time": 2.4828884601593018,
+    "num_doc_tokens": 217
+  },
+  {
+    "url": "https://www.wikihow.com/Fold-a-Paper-Star",
+    "gt_summary": "Choose paper to start with.",
+    "pred_summary": "\n\n\nPaper is a crucial element in creating a paper star. Any type of paper can be used, but sturdier options like printer paper are recommended first. The size of the paper can vary, but a square-sized or letter-sized paper (8.5\u201d x 11\u201d) is a good starting point.",
+    "inference_time": 2.570657730102539,
+    "num_doc_tokens": 79
+  },
+  {
+    "url": "https://www.wikihow.com/Do-Donuts",
+    "gt_summary": "Shift your car into reverse gear. Begin to back your car up. Turn your wheel sharply.",
+    "pred_summary": "\n\nThe method described in the text only works with cars that have a manual transmission and requires the use of the clutch, accelerator, and steering wheel. The process involves turning the steering wheel in one direction while shifting the car into reverse, then releasing the clutch and accelerator to cause the car to slide on the back wheels. The driver then jerks the steering wheel in the opposite direction to generate pressure against the body (lateral G force) and completes the donuts.",
+    "inference_time": 3.836810350418091,
+    "num_doc_tokens": 273
+  },
+  {
+    "url": "https://www.wikihow.com/Cook-a-Turkey-Breast",
+    "gt_summary": "Purchase 1\u00a01\u20444 pounds (570\u00a0g) of turkey breast for each person you'd like to serve.",
+    "pred_summary": "\n\nCheck the freezer case in the meat department if fresh turkey breasts are not available in the meat case. You should be able to find bone-in skin-on breasts all year round. This is a convenient option for those who want to cook a turkey at home without having to worry about finding fresh breasts.",
+    "inference_time": 2.422067403793335,
+    "num_doc_tokens": 47
+  },
+  {
+    "url": "https://www.wikihow.com/Give-Someone-a-Filling",
+    "gt_summary": "Take pain relievers to address the pain. Apply dental wax to sharp edges. Place temporary dental fillings. Consult with your dentist.",
+    "pred_summary": "\nPain is sometimes experienced with tooth cavities, and over-the-counter pain relievers can be taken as needed. A temporary solution to sharp edges of tooth cavities is to apply dental wax, and a temporary filling material is available at pharmacies for those who cannot visit their dentist. It is important to consult a dentist for a permanent filling even if temporary solutions are used to deal with tooth cavities.",
+    "inference_time": 3.2698566913604736,
+    "num_doc_tokens": 488
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Bingo-Cards",
+    "gt_summary": "Search for an bingo card generator. Determine the type of information you want to place in each bingo square. Type in the name of your card and the words you will use. Decide whether or not you want a free space. Determine the size of your card. Print your bingo cards.",
+    "pred_summary": "\nThe text describes how to use online bingo card generators to create custom bingo cards for various games. The generators typically ask for the card title, list of words or numbers, and the number of squares on the card. After generating the cards, the user can print them out on card stock and laminate them for durability.",
+    "inference_time": 2.5260257720947266,
+    "num_doc_tokens": 907
+  },
+  {
+    "url": "https://www.wikihow.com/Cheat-at-Card-Games",
+    "gt_summary": "Deal yourself the top card by \u201csecond dealing\u201d to the rest of the table. Deal your hand off the bottom of the deck. Stack the deck with the cards in order.",
+    "pred_summary": "\n\nThe author of the text describes a technique for dealing cards in Poker without revealing the order of the deck. The method involves sliding the top card of the deck at an angle and using the thumb and forefinger of the dealing hand to grab the next card, while keeping the rest of the deck hidden from view. The author also suggests using an overhand shuffle to float the desired cards to the top of the deck and then table shuffling to mix up the cards, making it more difficult for other players to guess the order of the deck.",
+    "inference_time": 4.101954698562622,
+    "num_doc_tokens": 622
+  },
+  {
+    "url": "https://www.wikihow.com/Fix-a-Sagging-Emtek-Door-Handle",
+    "gt_summary": "Replace the keyed washer. Replace the torsion spring. Replace the top washer. Slide the top clip into place. Push in the turn post. Tighten the bolt with an Allen wrench. Place your fixed lever or knob back on the door.",
+    "pred_summary": "\n\nThe Emtek torsion spring needs to be put back in place and secured with an Allen wrench. Once the spring is secure, the lever or knob can be put back on the door. If the lever is stiff, it can be placed back on the door and if it doesn't fix the issue, it's best to contact Emtek for further assistance.",
+    "inference_time": 2.8285043239593506,
+    "num_doc_tokens": 387
+  },
+  {
+    "url": "https://www.wikihow.com/Change-Google-Chrome-Downloads-Settings",
+    "gt_summary": "Decide if you want a default download folder. Decide if you want to select where each download gets saved. Exit the Downloads Settings menu.",
+    "pred_summary": "\n\nThe settings for downloading files are where you choose where your downloaded files are saved to. You can choose to save them to a default folder or pick where each individual download goes. If you want to pick where each download goes, you can check the box at the bottom of the settings menu.",
+    "inference_time": 2.104719638824463,
+    "num_doc_tokens": 209
+  },
+  {
+    "url": "https://www.wikihow.com/Animate",
+    "gt_summary": "Get a number of sheets of paper you can flip through. Create the individual images. Assemble the images together. Flip through the pages.",
+    "pred_summary": "\nFlipbooks are a fun way to create the illusion of motion by flipping through pages of drawings or photographs. To make a flipbook, you can use sheets of paper bound at one edge, and draw or photograph the images you want to animate. Once you have your images arranged, bend the pages upward with your thumb and release them at an even speed to see the animation come to life.",
+    "inference_time": 3.0929815769195557,
+    "num_doc_tokens": 523
+  },
+  {
+    "url": "https://www.wikihow.com/Survive-As-an-Intellectually-Gifted-Person",
+    "gt_summary": "Avoid making your boss too dependent on your work. Take care of your boss\u2019s ego. Resist over-specializing in your current position. Share the load and let others do some of the work. Be willing to accept constructive feedback and criticism. Accept that some jobs are not meant for gifted people.",
+    "pred_summary": "\nHighly intelligent people have challenges in the workplace, such as being seen as a workhorse, not being promoted, or feeling like they have to constantly prove themselves. They may also struggle with perfectionism and difficulty delegating tasks to others. Despite these challenges, highly intelligent people can still find ways to excel and be successful in their careers by learning to balance their strengths with their weaknesses and being open to feedback and criticism.",
+    "inference_time": 3.437880516052246,
+    "num_doc_tokens": 696
+  },
+  {
+    "url": "https://www.wikihow.com/Add-Places-to-Google-Maps",
+    "gt_summary": "Open Google Maps. Click \u2630. Click Add a missing place. Enter a name for the place. Add the place's address. Select a category. Add other information about your place. Click Submit.",
+    "pred_summary": "\nAdding a place to Google Maps involves going to the Google Maps website, clicking the \"Add a place\" link in the pop-out menu, and entering the name, address, and category of the place you want to add. If the place you entered doesn't already exist in Google Maps, you'll receive a confirmation email within a couple of weeks. If the place already exists, you can click the \"SUBMIT ANYWAY\" button to update its address.",
+    "inference_time": 3.498969316482544,
+    "num_doc_tokens": 453
+  },
+  {
+    "url": "https://www.wikihow.com/Sprint-in-Minecraft",
+    "gt_summary": "Flick the left analog stick forward twice. Hold forward to keep sprinting. Keep your hunger above six.",
+    "pred_summary": "\n\nSprinting in Minecraft is done by pushing the forward button on the control stick twice quickly, and then keeping the stick forward. This will cause your character to sprint until you release the stick, collide with a block, or interact with a mob. If your hunger level drops below six, you will no longer be able to sprint.",
+    "inference_time": 2.611170768737793,
+    "num_doc_tokens": 82
+  }
+]

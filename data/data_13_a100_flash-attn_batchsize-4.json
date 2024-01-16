@@ -1,0 +1,82 @@
+[
+  {
+    "url": "https://www.wikihow.com/Change-a-Bathtub-Faucet",
+    "gt_summary": "Buy a new stem and handle for your tub. Screw the stem onto the faucet pipe. Slide your new handle over the stem and screw it in place.",
+    "pred_summary": "nobody likes a leaky faucet, but fixing it can be easy if you have the right tools and know-how. Bring your old stems and handles with you when you buy a new faucet, and make sure to get the right size and type of stem for your system. With a little patience and some basic plumbing skills, you can replace your old faucet in no time.\n\n\n\n\n",
+    "batch_inference_time": 6.7923102378845215,
+    "num_doc_tokens": 326,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Redeem-Savings-Bonds",
+    "gt_summary": "Visit your local bank. Have the proper identification. Fill out a Power of Attorney form if you need to. Put in writing the child is too young to cash if cashing for a minor. Redeem the bonds electronically. Claim earned interest on your tax return.",
+    "pred_summary": "everybody goes to their bank to redeem their savings bonds. If you do not have an account at the bank, you will have to show a photo ID and provide a signature. If you have a Power of Attorney, you can fill out the Power of Attorney form and submit it to the bank.",
+    "batch_inference_time": 6.7923102378845215,
+    "num_doc_tokens": 978,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Book",
+    "gt_summary": "Select a topic. Identify your audience. Develop your characters. Outline your book. Research the market. Revise your outline.",
+    "pred_summary": " To write a book, start by generating a list of potential topics, then select one that excites you and develop an elevator pitch for it. Identify your target audience and create fictional reader profiles to help guide your writing. Outlines are essential for keeping your plot organized and ensuring that your story flows logically, so create one that includes the five key sections of any plot (inciting incident, complications, climax, anti-climax, and conclusion).",
+    "batch_inference_time": 6.7923102378845215,
+    "num_doc_tokens": 1307,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Fabric-Belt",
+    "gt_summary": "Add a bow. Add decorative stitching. Add corset-style lacing. Get creative!",
+    "pred_summary": "nobody wants to wear the same old boring belt every day. Fortunately, there are many ways to customize a belt to make it unique and express your personal style. From adding embellishments to changing the shape of the buckle, there are countless ways to make your belt stand out and reflect your personality.",
+    "batch_inference_time": 6.7923102378845215,
+    "num_doc_tokens": 512,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Do-Ballet-Fouette-Turns",
+    "gt_summary": "Start holding the barre in first or fifth position. To prep for practice, go to pass\u00e9 en relev\u00e9. Pli\u00e9 and d\u00e8velopp\u00e9 front. Open your leg to the side, or \u00e0 la seconde. Bring everything in at once. Once you have those three moves down, do a pirouette.",
+    "pred_summary": "kwietaniec, you are working with a barre, but you can also use a wall or banister for balance. You will be performing pli\u00e9s, d\u00e9velop\u00e9s, and pirouettes, keeping your core tight and hips down. The text also mentions that you will be working with your right leg as your working leg.",
+    "batch_inference_time": 5.156991481781006,
+    "num_doc_tokens": 326,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Convince-Your-Parents-to-Let-You-Buy-a-Horse",
+    "gt_summary": "Give your parents time to consider. Follow through on other responsibilities. Continue to show commitment to horses. Act mature.",
+    "pred_summary": "Begriffe: parents, horse ownership, responsibility.",
+    "batch_inference_time": 5.156991481781006,
+    "num_doc_tokens": 248,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Clean-Crystal",
+    "gt_summary": "Create a solution with warm water and mild dish soap. Submerge your crystal in the solution. Rinse thoroughly. Apply a bit of toothpaste to remove mineral deposits on the crystal. Cover crystal in a mixture of vinegar and salt to remove deposits. Dry your crystal.",
+    "pred_summary": "\nCrystal cleaning can be done by filling a sink or bucket with warm water and a small amount of mild dishwashing soap. Line the bottom with a rubber mat or cloth to prevent damage. For larger items, use a clean, wet cloth or sponge to wipe down the item and remove any lingering soap.",
+    "batch_inference_time": 5.156991481781006,
+    "num_doc_tokens": 649,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Cope-With-a-Diagnosis-of-Diabetes",
+    "gt_summary": "Start slowly. Create new shopping habits. Exercise your body to reduce your glucose level and keep in shape. Record your blood levels in a small notebook.",
+    "pred_summary": "nobody likes to be told what to do, especially when it comes to their health. However, if you have diabetes, you need to take charge of your care to manage your disease. Contacting your doctor, seeking out additional medical assistance, shopping for diabetic supplies, and staying active are all important steps to take in order to manage your diabetes and improve your overall health.",
+    "batch_inference_time": 5.156991481781006,
+    "num_doc_tokens": 338,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Support-Your-Girlfriend-After-She-Has-an-Abortion",
+    "gt_summary": "Think about your own feelings about the abortion. Talk to her about how you feel when the time is right. Reach out to people you trust. Remember that the process will take time for both of you.",
+    "pred_summary": "\n\nYou might feel you have to suppress your emotions so you can be there for your girlfriend, but this will only result in more pain and frustration in the long run. It's okay if you don't feel ready to talk with your girlfriend just yet, but let yourself confront your emotions mentally. Openly communicating with her about how you feel can help keep your relationship healthy and help both of you start to heal.",
+    "batch_inference_time": 5.452139377593994,
+    "num_doc_tokens": 630,
+    "batch_id": 2
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Tooth-Powder",
+    "gt_summary": "Measure out four tablespoons calcium (carbonate) powder. Add two tablespoons baking soda. Include \u00bd teaspoon of stevia. Sprinkle in one teaspoon sea salt. Mix all of the ingredients together.",
+    "pred_summary": "Unterscheidung between the ingredients and their functions.\nCalcium carbonate is added to the tooth powder to help rebuild the calcium in your teeth, baking soda reduces the acid content in your mouth, stevia helps to improve the flavor of the tooth powder, sea salt adds minerals to the tooth powder, and baking soda is a vital ingredient in any tooth powder recipe.",
+    "batch_inference_time": 5.452139377593994,
+    "num_doc_tokens": 299,
+    "batch_id": 2
+  }
+]

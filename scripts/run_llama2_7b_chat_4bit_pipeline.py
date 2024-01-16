@@ -1,7 +1,7 @@
 """
 Overview
 
-This script uses one-shot prompting with the Llama2-7b chat model (4bit format)
+This script uses zero-shot prompting with the Llama2-7b chat model (4bit format)
 to summarize text documents from the Wikilingua dataset.
 
 Instructions
