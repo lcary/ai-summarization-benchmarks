@@ -1,5 +1,6 @@
 accelerate
 bitsandbytes
 datasets
-torch
-transformers
+flash-attn
+torch==2.1.2
+transformers==4.36.1

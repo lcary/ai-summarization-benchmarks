@@ -1,8 +1,10 @@
 """
-Overview
+This script uses the Llama2-7b chat model to summarize text documents from the Wikilingua dataset.
 
-This script uses a one-shot prompt with the Llama2-7b chat model
-to summarize text documents from the Wikilingua dataset.
+To update this script, change the default kwargs to the `main` method, such as another experiment
+name for a valid key from the EXPERIMENTS variable. See the repo root readme for more information.
+
+TODO: Add typer integration and rerun tests.
 """
 import json
 import random
@@ -55,13 +57,16 @@ def get_default_model_and_tokenizer(model_name: str) -> tuple:
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     return model, tokenizer
 
+def get_4bit_config() -> BitsAndBytesConfig:
+    return BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_compute_dtype=torch.float16
+    )
+
 
 def get_4bit_model_and_tokenizer(model_name: str) -> tuple:
-    quantization_config = BitsAndBytesConfig(
-        load_in_4bit=True, bnb_4bit_compute_dtype=torch.bfloat16
-    )
     model = AutoModelForCausalLM.from_pretrained(
-        model_name, device_map="auto", quantization_config=quantization_config
+        model_name, device_map="auto", quantization_config=get_4bit_config()
     )
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     return model, tokenizer
@@ -76,11 +81,34 @@ def get_8bit_model_and_tokenizer(model_name: str) -> tuple:
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
     return model, tokenizer
 
+def get_flash_attn_model_and_tokenizer(model_name: str) -> tuple:
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        device_map="auto",
+        torch_dtype=torch.bfloat16,
+        attn_implementation="flash_attention_2",
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+    return model, tokenizer
+
+def get_flash_4bit_model_and_tokenizer(model_name: str) -> tuple:
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        device_map="auto",
+        torch_dtype=torch.bfloat16,
+        attn_implementation="flash_attention_2",
+        quantization_config=get_4bit_config()
+    )
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+    return model, tokenizer
+
 
 EXPERIMENTS = {
     "default": get_default_model_and_tokenizer,
+    "flash-attn": get_flash_attn_model_and_tokenizer,
     "4-bit": get_4bit_model_and_tokenizer,
     "8-bit": get_8bit_model_and_tokenizer,
+    "flash-4bit": get_flash_4bit_model_and_tokenizer
 }
 
 
