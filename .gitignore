@@ -1,4 +1,6 @@
-venv/
-text-generation-webui/
-.idea/
 .DS_Store
+.idea/
+.ipynb_checkpoints/
+backup/
+text-generation-webui/
+venv/

@@ -1,0 +1,82 @@
+[
+  {
+    "url": "https://www.wikihow.com/Change-a-Bathtub-Faucet",
+    "gt_summary": "Buy a new stem and handle for your tub. Screw the stem onto the faucet pipe. Slide your new handle over the stem and screw it in place.",
+    "pred_summary": "nobody likes to buy a new faucet only to find out that the old one doesn't fit. By bringing your old stem and handle with you when you shop, you can ensure a perfect fit. Make sure to buy stems that match your old ones and handles that match the rest of your bathroom.",
+    "batch_inference_time": 8.522034406661987,
+    "num_doc_tokens": 326,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Redeem-Savings-Bonds",
+    "gt_summary": "Visit your local bank. Have the proper identification. Fill out a Power of Attorney form if you need to. Put in writing the child is too young to cash if cashing for a minor. Redeem the bonds electronically. Claim earned interest on your tax return.",
+    "pred_summary": "Begriffe like \"redeem\", \"bond\", \"bank\", \"identification\", \"name\", \"signature\", \"Power of Attorney\", \"Treasury Department\", \"TreasuryDirect.gov\" and \"taxable income\" are used. The article explains how to redeem savings bonds at a bank or the Federal Reserve Bank, and how to do it electronically through TreasuryDirect.gov. The article also provides information on how to fill out the \"Request for Payment\" section of the bond, and how to submit a Power of Attorney form if the bond owner is unable to sign the request form themselves.",
+    "batch_inference_time": 8.522034406661987,
+    "num_doc_tokens": 978,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Book",
+    "gt_summary": "Select a topic. Identify your audience. Develop your characters. Outline your book. Research the market. Revise your outline.",
+    "pred_summary": "\n\nTo begin writing a book, start by generating a list of potential topics and then selecting the one that excites you the most. Next, create an elevator pitch for your selected topic to determine if it has legs, and then narrow down your list of potential topics to one. Finally, identify your audience, create fictional reader profiles, and develop an outline to keep you focused and on track throughout the writing process.",
+    "batch_inference_time": 8.522034406661987,
+    "num_doc_tokens": 1307,
+    "batch_id": 0
+  },
+  {
+    "url": "https://www.wikihow.com/Make-a-Fabric-Belt",
+    "gt_summary": "Add a bow. Add decorative stitching. Add corset-style lacing. Get creative!",
+    "pred_summary": "\nBows and bows look great on fabric belts, especially when they are made from the same fabric as the belt. There are many ways to make a bow, from simple to intricate designs, and they can be attached to the belt in various ways. You can also add embellishments such as rhinestones, faux metal spikes, or decorative lace and fringe to customize your belt.",
+    "batch_inference_time": 5.20019793510437,
+    "num_doc_tokens": 512,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Do-Ballet-Fouette-Turns",
+    "gt_summary": "Start holding the barre in first or fifth position. To prep for practice, go to pass\u00e9 en relev\u00e9. Pli\u00e9 and d\u00e8velopp\u00e9 front. Open your leg to the side, or \u00e0 la seconde. Bring everything in at once. Once you have those three moves down, do a pirouette.",
+    "pred_summary": "Unterscheidung between barre and wall is that the barre provides resistance and support, while the wall provides resistance but not support. The text describes a series of exercises for beginner ballet dancers to practice, including pli\u00e9, develop\u00e9, and pirouette. These exercises focus on proper technique and alignment, with the goal of strengthening the core and improving balance and control.",
+    "batch_inference_time": 5.20019793510437,
+    "num_doc_tokens": 326,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Convince-Your-Parents-to-Let-You-Buy-a-Horse",
+    "gt_summary": "Give your parents time to consider. Follow through on other responsibilities. Continue to show commitment to horses. Act mature.",
+    "pred_summary": "Hinweis: The text is written in a humble and respectful tone, emphasizing the importance of patience, responsibility, and hard work in convincing parents to buy a horse.",
+    "batch_inference_time": 5.20019793510437,
+    "num_doc_tokens": 248,
+    "batch_id": 1
+  },
+  {
+    "url": "https://www.wikihow.com/Clean-Crystal",
+    "gt_summary": "Create a solution with warm water and mild dish soap. Submerge your crystal in the solution. Rinse thoroughly. Apply a bit of toothpaste to remove mineral deposits on the crystal. Cover crystal in a mixture of vinegar and salt to remove deposits. Dry your crystal.",
+    "pred_summary": "\n\nTo clean crystal, fill a sink or bucket with warm water and a small amount of mild dish soap. Submerge the crystal in the solution and gently agitate it for a few minutes. Rinse the crystal with warm water and dry it with a soft cloth to prevent water spots.",
+    "batch_inference_time": 5.819870948791504,
+    "num_doc_tokens": 649,
+    "batch_id": 2
+  },
+  {
+    "url": "https://www.wikihow.com/Cope-With-a-Diagnosis-of-Diabetes",
+    "gt_summary": "Start slowly. Create new shopping habits. Exercise your body to reduce your glucose level and keep in shape. Record your blood levels in a small notebook.",
+    "pred_summary": "sierpite the main points that the author wants to convey.\n\nThe author suggests several ways to help manage diabetes, including contacting a primary doctor, seeking additional assistance from medical professionals, and keeping a daily log of blood glucose levels and meals. The author also recommends forming a typical shopping routine and staying active through exercise to improve overall health. By following these tips, individuals with diabetes can better manage their condition and improve their quality of life.",
+    "batch_inference_time": 5.819870948791504,
+    "num_doc_tokens": 338,
+    "batch_id": 2
+  },
+  {
+    "url": "https://www.wikihow.com/Support-Your-Girlfriend-After-She-Has-an-Abortion",
+    "gt_summary": "Think about your own feelings about the abortion. Talk to her about how you feel when the time is right. Reach out to people you trust. Remember that the process will take time for both of you.",
+    "pred_summary": "sierpien is a difficult experience, and it's okay to feel upset or confused. It's important to communicate with your girlfriend about your feelings and boundaries, and to prioritize your mental health. Give yourself time to work through your feelings and be kind to each other as you go through this process together.",
+    "batch_inference_time": 5.819870948791504,
+    "num_doc_tokens": 630,
+    "batch_id": 2
+  },
+  {
+    "url": "https://www.wikihow.com/Make-Tooth-Powder",
+    "gt_summary": "Measure out four tablespoons calcium (carbonate) powder. Add two tablespoons baking soda. Include \u00bd teaspoon of stevia. Sprinkle in one teaspoon sea salt. Mix all of the ingredients together.",
+    "pred_summary": "\n\nTo make tooth powder, crush calcium carbonate tablets or buy calcium powder in bulk and add it to a bowl with baking soda, stevia, and sea salt. Mix the ingredients together until well combined, and transfer the mixture to a mason jar for storage. This tooth powder recipe helps to rebuild the calcium in your teeth and improve their overall health.",
+    "batch_inference_time": 3.2880871295928955,
+    "num_doc_tokens": 299,
+    "batch_id": 3
+  }
+]

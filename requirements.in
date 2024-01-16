@@ -1,6 +1,9 @@
 accelerate
+autoawq
 bitsandbytes
 datasets
 flash-attn
 torch==2.1.2
 transformers==4.36.1
+typer
+vllm
