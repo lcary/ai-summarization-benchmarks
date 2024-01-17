@@ -1,4 +1,5 @@
 """
+Runs llama2b inference on a T4 GPU.
 Required setup:
 
     !apt-get install libaio-dev
@@ -15,12 +16,12 @@ DEPLOYMENT_NAME = "test-llama2-deepspeed"
 
 model_name: str = "meta-llama/Llama-2-7b-chat-hf"
 
-# Workaround for RuntimeError due to old CUDA capabilities version (<8)
-# is to use the legacy deepspeed library (mii.deploy) with zero inference enabled
+# Workaround for RuntimeError due to old CUDA compute capabilities version.
+# T4 has version 7.5 and new deepspeed-mii library APIs require version >=8.
+# Workaround is to use the legacy deepspeed library (mii.deploy)
 # https://github.com/microsoft/DeepSpeed-MII/issues/273#issuecomment-1813151824
 # RuntimeError: Unable to load ragged_device_ops op due to no compute capabilities remaining after filtering
 
-# Config settings: https://github.com/microsoft/DeepSpeed-MII/blob/95d1e1c8890a016f2b5788414754abbbfd4540ae/mii/legacy/config.py#L25
 mii.deploy(
     deployment_name=DEPLOYMENT_NAME,
     deployment_type=mii.constants.DeploymentType.NON_PERSISTENT,

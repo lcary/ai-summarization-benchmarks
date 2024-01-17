@@ -4,121 +4,128 @@ Benchmarks testing the [Llama2-7b chat model](https://huggingface.co/meta-llama/
 on random text summarization inference tasks from the [Wikilingua](https://huggingface.co/datasets/wiki_lingua)
 dataset.
 
-## Results
+## Experiments
 
-### Experiments
+These benchmark experiments tested the time it took for Llama-7b to generate summaries on Wikilingua articles.
+These tables are ordered by the number of documents processed per second by the model.
 
-All experiments were run on single-GPU machines in Google Colab (either the T4 or A100).
-Experiments were run for multiple optimization scenarios using the Llama2-7b model:
+### Constraints
 
- - `default`: [Default model loader](https://huggingface.co/docs/transformers/main/model_doc/llama2) (no optimizations)
+The below experiments were conducted with the following constraints:
+
+ - Task: Text Summarization
+ - Number of GPUs: 1
+ - 300 maximum generation tokens
+ - No input truncation
+
+### Scenarios
+
+The experiments tested multiple optimization scenarios using the Llama2-7b model:
+
  - `4-bit`: [4-bit Quantization](https://huggingface.co/blog/4bit-transformers-bitsandbytes)
  - `8-bit`: [8-bit Quantization](https://huggingface.co/blog/hf-bitsandbytes-integration)
- - `flash-attn`: [Flash Attention](https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2)
+ - `default`: [Default model loader](https://huggingface.co/docs/transformers/main/model_doc/llama2) (no optimizations)
  - `flash-4bit`: Combined Flash Attention w/ 4-bit quantization
- - `vllm`: [`vLLM` optimizations (KV cache, CUDA graph)](https://docs.vllm.ai/en/latest/index.html)
- - `vllm-awq`: [vLLM with `autoawq` quantizations](https://docs.vllm.ai/en/latest/quantization/auto_awq.html)
- 
-See the `scripts/run_llama2_7b.py` script for the code used to load the model in most scenarios.
-See the `scripts/run_llama_7b_vllm.py` script for VLLM optimizations.
-All other scripts are under `scripts/`, such as those documented in the "Experiment Notes" below.
+ - `flash-attn`: [Flash Attention](https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2)
+ - `vllm-awq`: [vLLM with AutoAWQ quantization](https://docs.vllm.ai/en/latest/quantization/auto_awq.html)
 
-### Test Results
+### Hardware
 
-The following tables shows the time it took for Llama-7b to generate summaries on different datasets.
-These tables are ordered by the number of documents processed per second by the model.
-Output quality was gauged by ROGUE-1 F1 scores, since quantization can affect how well
-the model performs on a given task.
+For the GPU requirement, these experiments were run on the following instance types:
 
-#### Constraints
+ - A100 GPU Server (40GB GPU RAM)
+ - T4 GPU Servers (15GB GPU RAM)
 
-The below experiments were conducted with the following settings:
+All scripts were run on [Google Colab](https://colab.research.google.com/drive/1H9rehbj9naQ-req4P0xRxFch3PxIklSZ#scrollTo=PFHXYM-S1QqG).
 
- - 300 maximum output tokens
- - 4096 maximum input (prompt) tokens
+### Dataset
 
-#### T4 Experiments
-
-The following experiments were run on a T4 machine for a set of Wikilingua articles:
-
-| Scenario     | Batch Size | Processed docs/sec | Experiment # | Script                  | ROGUE-1 F1 |
-|--------------|------------|--------------------|--------------|-------------------------|------------|
-| `vllm-awq`   | dynamic    | 0.423              | 21           | `run_llama2_7b_vllm.py` | 0.233      |
-| `4-bit`      | 1          | 0.183              | 22           | `run_llama2_7b.py`      | 0.251      |
-| `vllm-awq`   | 1          | 0.150              | 24           | `run_llama2_7b_vllm.py` | 0.279      |
-| `8-bit`      | 1          | 0.055              | 23           | `run_llama2_7b.py`      | 0.275      |
-
-Dataset details:
  - 100 randomly sampled documents from Wikilingua's `english` corpus (same set for all experiments)
- - Average document length: 515.4 tokens
- - For the set of article URLs in this experiment dataset, see `data/100_articles.txt`.
+ - Average document length for the sample: 515.4 tokens
 
-To see the data (output, duration) collected during inference, see the `data/` directory.
+For the set of sampled article URLs in this experiment dataset, see `data/100_articles.txt`.
 
-Many of the experiment types could not be run on the T4
-due to out of memory issues and compatibility issues. 
-For more details on failed T4 experiments, see the `Experiment Notes` below.
+### Results
 
-#### A100 Experiments
+The following experiments were run on A100 and T4 for the above set of documents in the Wikilingua dataset.
 
-The following A100 experiments were run on different sets of documents in the Wikilingua dataset.
-_Note: I ran out of GPU credits before being able to run all A100 experiments on the same set of 100 articles.
-That is why some of the A100 experiments have different document counts and token averages. Since the A100
-experiments are not all on the same dataset, performance needs to be interpreted with a grain of salt._ 
+| Experiment ID   | Docs/Second | Instance Type | Experiment Script                          | ROGUE-1 F1 |
+|-----------------|-------------|---------------|--------------------------------------------|------------|
+| 25 `vllm-awq`   | 4.273       | A100 GPU      | `run_llama2_7b_vllm.py`                    | 0.234      |
+| 21 `vllm-awq`   | 0.423       | T4 GPU        | `run_llama2_7b_vllm.py`                    | 0.233      |
+| 16 `flash-attn` | 0.339       | A100 GPU      | `run_llama2_7b.py --experiment=flash-attn` | 0.282      |
+| 17 `default`    | 0.317       | A100 GPU      | `run_llama2_7b.py --experiment=default`    | 0.280      |
+| 22 `4-bit`      | 0.183       | T4 GPU        | `run_llama2_7b.py --experiment=4-bit`      | 0.251      |
+| 23 `8-bit`      | 0.055       | T4 GPU        | `run_llama2_7b.py --experiment=8-bit`      | 0.275      |
 
-| Scenario     | Batch Size | Processed docs/sec | Total Documents | Avg. tokens/doc | Experiment # | ROGUE-1 F1 |
-|--------------|------------|--------------------|-----------------|-----------------|--------------|------------|
-| `flash-attn` | 10         | 0.861              | 10              | 561.3           | 15           | 0.234      |
-| `flash-attn` | 5          | 0.628              | 10              | 561.3           | 14           | 0.247      |
-| `flash-attn` | 4          | 0.575              | 10              | 561.3           | 13           | 0.238      |
-| `flash-attn` | 3          | 0.438              | 10              | 561.3           | 12           | 0.243      |
-| `default`    | 2          | 0.380              | 10              | 561.3           | 10           | 0.289      |
-| `flash-attn` | 2          | 0.344              | 10              | 561.3           | 11           | 0.229      |
-| `flash-attn` | 1          | 0.339              | 100             | 515.4           | 16           | 0.282      |
-| `default`    | 1          | 0.317              | 100             | 515.4           | 17           | 0.280      |
-| `flash-4bit` | 1          | 0.184              | 10              | 561.3           | 18           | 0.266      |
-| `4-bit`      | 1          | 0.180              | 100             | 451.7           | 2            | 0.250      |
-| `8-bit`      | 1          | 0.054              | 10              | 607.2           | 15           | 0.234      |
-
-### Experiment Notes
-
- - **Quantization**: In general, quantization had more impact on increasing inference speed on the lower-RAM T4 instance type
-   (15GB GPU RAM) compared to the A100 (40GB GPU RAM). This confirms how quantization is a
-   great fit for educational use or running summarization tasks on edge devices.
+ - **Summary**: `vLLM` optimization had the fastest throughput at >10x faster than any other strategy
+   for the A100 GPU. The strategy was less profound on the lower-memory T4 GPU, and was followed by
+   several other strategies.
+ - **Output & Results Data**: To see the data (output, duration) collected during inference, 
+   find the JSON files with a given Experiment ID in its filename under the `data/` directory.
+ - **Quantization**: quantization helped a lot with avoiding out of memory errors on the
+   T4 instance type, which was less of a concern on the larger-memory A100.
  - **Memory Usage**: During the experiments, it was typical for T4 GPU memory
-   usage to be around 10-15GB, whereas A100 GPU memory usage was around 30-40GB. 
- - **Batching**: Additionally, batching had a profound effect on inference speed, 
-   but also resulted in OOM errors, at size 2 or greater on the T4 and later
-   and at size 4 or greater for the A100.
- - **Flash Attention**: Note that batching was only possible when using Flash Attention on the A100
-   after a size 4 documents per batch, otherwise OOMs occurred.
+   usage to be around 10-15GB, whereas A100 GPU memory usage was around 30-40GB.
+ - Many of the experiment types could not be run due to out of memory and compatibility issues. 
+   For more details on failed experiments, see the Experiment Notes below.
+ - Output quality was gauged by ROGUE-1 F1 scores, since quantization can affect how well
+   the model performs on a given task.
 
-#### Failed Experiments
+### Other Benchmarks
+
+#### A100 Batching Tests
+
+For the two GPU instance types tested, batching prompts did not impact results nearly as much
+as installing and running optimization frameworks like `vllm` (which does some automatic batching).
+Batching resulted in OOM errors all sizes on the T4 and later
+and at size 4 or greater for the A100 for more than 10 docs (see Failed Experiments).
+Note that batching was only possible when using Flash Attention on the A100
+after a size 4 documents per batch even for 10 documents, otherwise OOMs occurred.
+Note: Some of the below batching tests below were on different sets of documents. Since the A100
+experiments are not all on the same dataset, performance needs to be interpreted with a grain of salt. 
+
+| Experiment ID   | Batch Size | Docs/Second | Total Documents | Avg. tokens/doc | ROGUE-1 F1 |
+|-----------------|------------|-------------|-----------------|-----------------|------------|
+| 15 `flash-attn` | 10         | 0.861       | 10              | 561.3           | 0.234      |
+| 14 `flash-attn` | 5          | 0.628       | 10              | 561.3           | 0.247      |
+| 13 `flash-attn` | 4          | 0.575       | 10              | 561.3           | 0.238      |
+| 12 `flash-attn` | 3          | 0.438       | 10              | 561.3           | 0.243      |
+| 10 `default`    | 2          | 0.380       | 10              | 561.3           | 0.289      |
+| 11 `flash-attn` | 2          | 0.344       | 10              | 561.3           | 0.229      |
+| 16 `flash-attn` | 1          | 0.339       | 100             | 515.4           | 0.282      |
+| 17 `default`    | 1          | 0.317       | 100             | 515.4           | 0.280      |
+
+#### A100 Quantization Tests
+
+Several quantization tests actually had a negative effect on A100 inference speed.
+Note: Some of the below quantization tests were on different sets of documents.
+
+| Experiment ID  | Docs/Second | Total Documents | Avg. tokens/doc | ROGUE-1 F1 |
+|----------------|-------------|-----------------|-----------------|------------|
+| 1 `default`    | 0.317       | 100             | 515.4           | 0.280      |
+| 1 `flash-4bit` | 0.184       | 10              | 561.3           | 0.266      |
+| 2 `4-bit`      | 0.180       | 100             | 451.7           | 0.250      |
+| 1 `8-bit`      | 0.054       | 10              | 607.2           | 0.234      |
+
+### Failed Experiments
 
 Table of different errors from various experiments:
 
-| Scenario     | GPU Type | Batch Size | Error                | Documents |
-|--------------|----------|------------|----------------------|-----------|
-| `default`    | `T4`     | 1          | `OutOfMemoryError`   | 10        |
-| `flash-attn` | `T4`     | 1          | `RuntimeError`       | 10        |
-| `default`    | `T4`     | 2          | `OutOfMemoryError`   | 10        |
-| `vllm`       | `T4`     | dynamic    | >90% prompts skipped | 100       |
-| `default`    | `A100`   | 4          | `OutOfMemoryError`   | 10        |
-| `flash-attn` | `A100`   | 10         | `OutOfMemoryError`   | 100       |
-
-The `default` experiment running out of memory on the T4 instance occurred after an hour of runtime, during
-which only two documents were processed successfully. The following can be seen in the logs of this experiment,
-showing how the model couldn't even fit within the GPU memory and overflowed to the CPU:
-```
-WARNING:root:Some parameters are on the meta device device because they were offloaded to the disk and cpu.
-```
+| Experiment               | GPU Type | Batch Size | Error                | Documents |
+|--------------------------|----------|------------|----------------------|-----------|
+| `default`                | `T4`     | 1          | `OutOfMemoryError`   | 10        |
+| `flash-attn`             | `T4`     | 1          | `RuntimeError`       | 10        |
+| `default`                | `T4`     | 2          | `OutOfMemoryError`   | 10        |
+| `vllm` (no quantization) | `T4`     | dynamic    | >90% prompts skipped | 100       |
+| `default`                | `A100`   | 4          | `OutOfMemoryError`   | 10        |
+| `flash-attn`             | `A100`   | 10         | `OutOfMemoryError`   | 100       |
 
 The only way to successfully run experiments with the T4 instance in all cases was quantization.
-
 Other failed experiments that were unsuccessful on either the T4, the A100 or both include:
 
  - [DeepSpeed Optimizations](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-fastgen)
-   (script: `run_llama2_7b_deepspeed.py`)
+   (script: `run_llama2_7b_deepspeed_t4.py`, `run_llama2_7b_deepspeed_a100.py`)
  - [DeepSpeed ZeRO-Inference](https://github.com/microsoft/DeepSpeedExamples/tree/master/inference/huggingface/zero_inference)
    (script: `run_llama2_7b_deepspeed_zero.py`)
  - [IBM Foundation Model Stack](https://github.com/foundation-model-stack/foundation-model-stack)
@@ -129,6 +136,7 @@ Other failed experiments that were unsuccessful on either the T4, the A100 or bo
  - HuggingFace pipelining, GGUF model inference, and more...
 
 In most cases, the optimizations were still too slow or the T4 ran out of memory due to lack of quantization.
+More details can be found in the docstrings at the top of the above scripts.
 
 #### Flash Attention Incompatibility
 
@@ -145,6 +153,15 @@ during CUDA graph creation, resulting in out of memory limits unless we decrease
 sequence length (prompt + output), which results in the majority of documents being skipped. This
 is fixed by AWQ quantization at the expense of throughput (>5x slower). More info on this issue can
 be found in the `scripts/run_llama_7b_vllm.py` script docstring.
+
+## Next Steps
+
+ - [x] **All Combinations**: Test primary experiment scenarios on all GPU types. Requires purchasing additional GPU credits for the A100 experiments.
+ - [x] **Same Datasets**: The experiments were originally run on different random samples of the data. It would be good to standardize the experiments across different instances using the same sample, via a fixed set of articles.
+ - [ ] **Larger Experiments**: The experiments were run on small samples of the data. It would be good to scale up the experiments to 1000 records each. This requires renting additional GPUs.
+ - [ ] **Mistral**: Running experiments on the Mistral LLM family and compare inference time / ROGUE scores.
+ - [ ] **Orca**: Running experiments on the Orca LLM family and compare inference time / ROGUE scores.
+ - [ ] **Knowledge Distillation**: One of the most promising avenues to reducing the memory requirements of LLMs is to leverage knowledge distillation (KD), such as is done for the [Orca series](https://arxiv.org/abs/2306.02707). Note that KD is 2-3 orders of magnitude more expensive than simply renting a larger GPU instance, requiring significant GPU runtime for producing the training dataset from the teacher model, and dozens to hundreds of hours on many GPUs for training the student model.
 
 ## Setup
 
@@ -246,13 +263,3 @@ If the ldconfig requires a different directory, check for other nvidia libraries
 under /user/. If the notebook server has a different version of cuda home installed,
 check for that via `ls /user/local/cuda*` and set that to CUDA_HOME. After that,
 restart the session on the GPU server.
-
-## Next Steps
-
- - [ ] **All Combinations**: Test all experiments on all GPU types. Requires purchasing additional GPU credits for the A100 experiments.
- - [ ] **Same Datasets**: The experiments were originally run on different random samples of the data. It would be good to standardize the experiments across different instances using the same sample, via a fixed set of articles.
- - [ ] **Larger Experiments**: The experiments were run on small samples of the data. It would be good to scale up the experiments to 1000 records each. This requires renting additional GPUs.
- - [ ] **T4 Batching Stability**: Testing with batching multiple documents per `generate` call. When testing this approach on the T4 instances, I frequently encountered OOM and CUDA device errors which blocked further experiments. Likely a larger machine is needed or more time spent configuring resource limitations and truncating prompt text to avoid OOMs is required.
- - [ ] **A100 Batching Stability**: A100 experiments experienced out of memory errors when batching on larger sets of documents. Additional memory cleanup is likely required to stabilize memory usage.
- - [ ] **Mistral**: Running experiments on the Mistral LLM family and compare inference time / ROGUE scores.
- - [ ] **Knowledge Distillation**: One of the most promising avenues to reducing the memory requirements of LLMs is to leverage knowledge distillation (KD), such as is done for the [Orca series](https://arxiv.org/abs/2306.02707). Note that KD is 2-3 orders of magnitude more expensive than simply renting a larger GPU instance, requiring significant GPU runtime for producing the training dataset from the teacher model, and dozens to hundreds of hours on many GPUs for training the student model.

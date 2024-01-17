@@ -9,10 +9,12 @@ This will create backups of all results files and update rogue scores in-place.
 """
 import json
 from pathlib import Path
-from typing import List
+from typing import List, Optional
 
 import evaluate
+import typer
 
+print("Loading ROGUE metric from the evaluate library...")
 rouge = evaluate.load("rouge")
 
 def calculate_rogue1(ground_truth: List[str], predictions: List[str]) -> float:
@@ -55,8 +57,9 @@ def update_results(data_file):
     print(f"Wrote rogue score to: {orig_path}")
 
 
-def main():
-    data_files = list(Path("data/").glob("data_*.json"))
+def main(experiment: Optional[str] = None):
+    pattern = f"data_{experiment}_*.json" if experiment else "data_*.json"
+    data_files = list(Path("data/").glob(pattern))
     print(f"Updating {len(data_files)} results...")
     errors = False
     for data_file in data_files:
@@ -69,5 +72,6 @@ def main():
         raise RuntimeError("An unexpected error occurred. See above.")
     print("All results have been successfully updated.")
 
-if __name__ == '__main__':
-    main()
+
+if __name__ == "__main__":
+    typer.run(main)

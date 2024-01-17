@@ -15,7 +15,7 @@ import typer
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
-EXPERIMENT_DATASET_FILE = Path("../data/100_articles.txt")
+EXPERIMENT_DATASET_FILE = Path("data/100_articles.txt")
 EXPERIMENT_DATASET_URLS = set(EXPERIMENT_DATASET_FILE.read_text().split())
 
 
