@@ -9,13 +9,19 @@ import math
 import time
 from pathlib import Path
 from typing import Tuple, List, Iterator
+from urllib.request import urlretrieve
 
 import torch
 import typer
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
+
 EXPERIMENT_DATASET_FILE = Path("data/100_articles.txt")
+if not EXPERIMENT_DATASET_FILE.exists():
+    EXPERIMENT_DATASET_FILE.parent.mkdir(exist_ok=True)
+    DATASET = "https://raw.githubusercontent.com/lcary/ai-summarization-benchmarks/main/data/100_articles.txt"
+    urlretrieve(DATASET, EXPERIMENT_DATASET_FILE)
 EXPERIMENT_DATASET_URLS = set(EXPERIMENT_DATASET_FILE.read_text().split())
 
 

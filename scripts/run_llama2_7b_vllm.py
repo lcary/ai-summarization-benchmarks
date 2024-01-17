@@ -17,6 +17,7 @@ import os
 import time
 from pathlib import Path
 from typing import Tuple, List
+from urllib.request import urlretrieve
 
 import torch
 import typer
@@ -27,6 +28,10 @@ from vllm import SamplingParams
 EXPERIMENT_ARTICLES_FILE = Path(
     os.getenv("EXPERIMENT_ARTICLES_FILE", "data/100_articles.txt")
 )
+if not EXPERIMENT_ARTICLES_FILE.exists():
+    EXPERIMENT_ARTICLES_FILE.parent.mkdir(exist_ok=True)
+    DATASET = "https://raw.githubusercontent.com/lcary/ai-summarization-benchmarks/main/data/100_articles.txt"
+    urlretrieve(DATASET, EXPERIMENT_ARTICLES_FILE)
 EXPERIMENT_ARTICLES = set(EXPERIMENT_ARTICLES_FILE.read_text().split())
 
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")

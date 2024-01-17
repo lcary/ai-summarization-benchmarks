@@ -22,7 +22,7 @@ def update_results(result_path):
     results = read_json(result_path)
     orig_path = str(result_path)
     if "avg_inf_time" in results and "avg_doc_per_sec" not in results:
-        results["avg_doc_per_sec"] = 1/results["avg_inf_time"]
+        results["avg_doc_per_sec"] = 1 / results["avg_inf_time"]
         backup = orig_path + ".bak"
         print(f"Saved results backup to: {backup}")
         result_path.rename(backup)
