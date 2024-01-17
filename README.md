@@ -46,6 +46,8 @@ For the set of sampled article URLs in this experiment dataset, see `data/100_ar
 
 ### Results
 
+See the report notebook at [`notebooks/BenchmarksReport.ipynb`](`./notebooks/BenchmarksReport.ipynb`)
+
 The following experiments were run on A100 and T4 for the above set of documents in the Wikilingua dataset.
 
 | Experiment ID   | Docs/Second | Instance Type | Experiment Script                          | ROGUE-1 F1 |
