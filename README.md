@@ -45,7 +45,8 @@ For the set of sampled article URLs in this experiment dataset, see `data/100_ar
 
 ### Results
 
-See the report at [`notebooks/Llama2 7b Benchmarks.ipynb`](`./notebooks/Llama2 7b Benchmarks.ipynb`)
+See the report at [`notebooks/Llama2 7b Benchmarks.pdf`](./notebooks/Llama2%207b%20Benchmarks.pdf)
+or the report notebook at [`notebooks/Llama2 7b Benchmarks.ipynb`](./notebooks/Llama2%207b%20Benchmarks.ipynb).
 
 The following experiments were run on A100 and T4 for the above set of documents in the Wikilingua dataset.
 The below table is ordered by the number of documents processed per second by the model:
@@ -77,7 +78,7 @@ The below table is ordered by the number of documents processed per second by th
 
 ## Additional Tests
 
-See additional test results not listed above in [`docs/other-tests.md`](`./docs/other-tests.md`).
+See additional test results not listed above in [`docs/other-tests.md`](./docs/other-tests.md).
 
 ## Next Steps
 
@@ -90,8 +91,8 @@ See additional test results not listed above in [`docs/other-tests.md`](`./docs/
 
 ## Reproducibility
 
-See `docs/reproducibility.md` for reproducing the results and script usage instructions.
+See [`docs/reproducibility.md`](./docs/reproducibility.md) for reproducing the results and script usage instructions.
 
 ## Troubleshooting
 
-See `docs/troubleshooting.md` for troubleshooting steps.
+See [`docs/troubleshooting.md`](./docs/troubleshooting.md) for troubleshooting steps.
