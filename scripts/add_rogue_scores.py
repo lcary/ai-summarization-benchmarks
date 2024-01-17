@@ -17,11 +17,13 @@ import typer
 print("Loading ROGUE metric from the evaluate library...")
 rouge = evaluate.load("rouge")
 
+
 def calculate_rogue1(ground_truth: List[str], predictions: List[str]) -> float:
     score = rouge.compute(
         predictions=predictions, references=ground_truth, rouge_types=["rouge1"]
     )["rouge1"]
     return float(score)
+
 
 def evaluate_summaries(data: List[dict]) -> float:
     ground_truth = []
@@ -31,6 +33,7 @@ def evaluate_summaries(data: List[dict]) -> float:
         predictions.append(item["pred_summary"])
 
     return calculate_rogue1(ground_truth, predictions)
+
 
 def read_json(path: Path):
     print(f"Reading {path}")

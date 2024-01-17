@@ -24,7 +24,9 @@ from datasets import load_dataset
 from vllm import LLM
 from vllm import SamplingParams
 
-EXPERIMENT_ARTICLES_FILE = Path(os.getenv("EXPERIMENT_ARTICLES_FILE", "data/100_articles.txt"))
+EXPERIMENT_ARTICLES_FILE = Path(
+    os.getenv("EXPERIMENT_ARTICLES_FILE", "data/100_articles.txt")
+)
 EXPERIMENT_ARTICLES = set(EXPERIMENT_ARTICLES_FILE.read_text().split())
 
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
@@ -48,18 +50,28 @@ def load_sample(num_docs: int) -> list:
     dataset = list(filter(is_in_experiment_dataset, dataset))
     return dataset[:num_docs]
 
+
 def tokenize(tokenizer, prompt: str, max_length: int) -> Tuple[List[torch.Tensor], int]:
     """
     Tokenizes the prompt for some document text and loads it into GPU memory.
 
     Returns a tuple with the tokenized prompt and number of tokens in the input text.
     """
-    inputs = tokenizer.encode(prompt, max_length=max_length, truncation=True, return_tensors='pt', add_special_tokens=True)
+    inputs = tokenizer.encode(
+        prompt,
+        max_length=max_length,
+        truncation=True,
+        return_tensors="pt",
+        add_special_tokens=True,
+    )
     num_tokens = len(inputs[0])
     inputs = inputs.to(device)
     return inputs, num_tokens
 
-def run_pipeline(model_name: str, prompts: List[str], max_tokens: int) -> Tuple[List[str], float]:
+
+def run_pipeline(
+    model_name: str, prompts: List[str], max_tokens: int
+) -> Tuple[List[str], float]:
     """
     Runs the text summarization inference pipeline on a set of prompts.
     """
@@ -77,14 +89,15 @@ def run_pipeline(model_name: str, prompts: List[str], max_tokens: int) -> Tuple[
 
 
 def main(
-    max_tokens:int  = 300,
+    max_tokens: int = 300,
     model_name: str = "TheBloke/Llama-2-7b-Chat-AWQ",
     num_docs: int = 100,
 ):
-
     docs = load_sample(num_docs)
 
-    prompt_template = "Document: '{}' .\n\nSummary of the above Document in 1-3 sentences: '"
+    prompt_template = (
+        "Document: '{}' .\n\nSummary of the above Document in 1-3 sentences: '"
+    )
 
     prompts = [prompt_template.format(get_doc(item)[0]) for item in docs]
 

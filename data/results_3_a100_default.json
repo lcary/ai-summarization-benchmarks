@@ -2,5 +2,6 @@
   "total_time": 31.9023597240448,
   "avg_inf_time": 3.18690345287323,
   "avg_doc_tokens": 349.7,
-  "pred_score": 0.24079914114922274
+  "pred_score": 0.24079914114922274,
+  "avg_doc_per_sec": 0.3137842155520669
 }

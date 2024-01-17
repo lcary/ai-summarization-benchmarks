@@ -27,9 +27,14 @@ import mii
 import typer
 from datasets import load_dataset
 
-EXPERIMENT_ARTICLES_FILE = Path(os.getenv("EXPERIMENT_ARTICLES_FILE", "data/100_articles.txt"))
+EXPERIMENT_ARTICLES_FILE = Path(
+    os.getenv("EXPERIMENT_ARTICLES_FILE", "data/100_articles.txt")
+)
 EXPERIMENT_ARTICLES = set(EXPERIMENT_ARTICLES_FILE.read_text().split())
-PROMPT_TEMPLATE = "Document: '{}' .\n\nSummary of the above Document in 1-3 sentences: '"
+PROMPT_TEMPLATE = (
+    "Document: '{}' .\n\nSummary of the above Document in 1-3 sentences: '"
+)
+
 
 def get_url(item: dict) -> list:
     return item["url"]
@@ -49,11 +54,11 @@ def load_sample(num_docs: int) -> list:
     dataset = list(filter(is_in_experiment_dataset, dataset))
     return dataset[:num_docs]
 
-def main(
-max_new_tokens: int=300,
-        model_name:str="meta-llama/Llama-2-7b-chat-hf",
 
-    num_docs: int = 100
+def main(
+    max_new_tokens: int = 300,
+    model_name: str = "meta-llama/Llama-2-7b-chat-hf",
+    num_docs: int = 100,
 ):
     pipe = mii.pipeline(model_name)
 
@@ -81,7 +86,6 @@ max_new_tokens: int=300,
             }
         )
 
-
     results = {
         "total_time": total_duration,
         "total_docs": total,
@@ -103,5 +107,6 @@ max_new_tokens: int=300,
 
     pipe.destroy()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     typer.run(main)

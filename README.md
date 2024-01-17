@@ -25,7 +25,6 @@ The experiments tested multiple optimization scenarios using the Llama2-7b model
  - `4-bit`: [4-bit Quantization](https://huggingface.co/blog/4bit-transformers-bitsandbytes)
  - `8-bit`: [8-bit Quantization](https://huggingface.co/blog/hf-bitsandbytes-integration)
  - `default`: [Default model loader](https://huggingface.co/docs/transformers/main/model_doc/llama2) (no optimizations)
- - `flash-4bit`: Combined Flash Attention w/ 4-bit quantization
  - `flash-attn`: [Flash Attention](https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2)
  - `vllm-awq`: [vLLM with AutoAWQ quantization](https://docs.vllm.ai/en/latest/quantization/auto_awq.html)
 
@@ -34,7 +33,7 @@ The experiments tested multiple optimization scenarios using the Llama2-7b model
 For the GPU requirement, these experiments were run on the following instance types:
 
  - A100 GPU Server (40GB GPU RAM)
- - T4 GPU Servers (15GB GPU RAM)
+ - T4 GPU Server (15GB GPU RAM)
 
 All scripts were run on [Google Colab](https://colab.research.google.com/drive/1H9rehbj9naQ-req4P0xRxFch3PxIklSZ#scrollTo=PFHXYM-S1QqG).
 
@@ -59,8 +58,8 @@ The following experiments were run on A100 and T4 for the above set of documents
 | 23 `8-bit`      | 0.055       | T4 GPU        | `run_llama2_7b.py --experiment=8-bit`      | 0.275      |
 
  - **Summary**: `vLLM` optimization had the fastest throughput at >10x faster than any other strategy
-   for the A100 GPU. The strategy was less profound on the lower-memory T4 GPU, and was followed by
-   several other strategies.
+   for the A100 GPU. The strategy was less profound on the lower-memory T4 GPU, but still resulted
+   in a 2x speedup over other T4 experiments, and allowed the T4 to beat the other A100 experiments.
  - **Output & Results Data**: To see the data (output, duration) collected during inference, 
    find the JSON files with a given Experiment ID in its filename under the `data/` directory.
  - **Quantization**: quantization helped a lot with avoiding out of memory errors on the
@@ -72,87 +71,9 @@ The following experiments were run on A100 and T4 for the above set of documents
  - Output quality was gauged by ROGUE-1 F1 scores, since quantization can affect how well
    the model performs on a given task.
 
-### Other Benchmarks
+## Additional Tests
 
-#### A100 Batching Tests
-
-For the two GPU instance types tested, batching prompts did not impact results nearly as much
-as installing and running optimization frameworks like `vllm` (which does some automatic batching).
-Batching resulted in OOM errors all sizes on the T4 and later
-and at size 4 or greater for the A100 for more than 10 docs (see Failed Experiments).
-Note that batching was only possible when using Flash Attention on the A100
-after a size 4 documents per batch even for 10 documents, otherwise OOMs occurred.
-Note: Some of the below batching tests below were on different sets of documents. Since the A100
-experiments are not all on the same dataset, performance needs to be interpreted with a grain of salt. 
-
-| Experiment ID   | Batch Size | Docs/Second | Total Documents | Avg. tokens/doc | ROGUE-1 F1 |
-|-----------------|------------|-------------|-----------------|-----------------|------------|
-| 15 `flash-attn` | 10         | 0.861       | 10              | 561.3           | 0.234      |
-| 14 `flash-attn` | 5          | 0.628       | 10              | 561.3           | 0.247      |
-| 13 `flash-attn` | 4          | 0.575       | 10              | 561.3           | 0.238      |
-| 12 `flash-attn` | 3          | 0.438       | 10              | 561.3           | 0.243      |
-| 10 `default`    | 2          | 0.380       | 10              | 561.3           | 0.289      |
-| 11 `flash-attn` | 2          | 0.344       | 10              | 561.3           | 0.229      |
-| 16 `flash-attn` | 1          | 0.339       | 100             | 515.4           | 0.282      |
-| 17 `default`    | 1          | 0.317       | 100             | 515.4           | 0.280      |
-
-#### A100 Quantization Tests
-
-Several quantization tests actually had a negative effect on A100 inference speed.
-Note: Some of the below quantization tests were on different sets of documents.
-
-| Experiment ID  | Docs/Second | Total Documents | Avg. tokens/doc | ROGUE-1 F1 |
-|----------------|-------------|-----------------|-----------------|------------|
-| 1 `default`    | 0.317       | 100             | 515.4           | 0.280      |
-| 1 `flash-4bit` | 0.184       | 10              | 561.3           | 0.266      |
-| 2 `4-bit`      | 0.180       | 100             | 451.7           | 0.250      |
-| 1 `8-bit`      | 0.054       | 10              | 607.2           | 0.234      |
-
-### Failed Experiments
-
-Table of different errors from various experiments:
-
-| Experiment               | GPU Type | Batch Size | Error                | Documents |
-|--------------------------|----------|------------|----------------------|-----------|
-| `default`                | `T4`     | 1          | `OutOfMemoryError`   | 10        |
-| `flash-attn`             | `T4`     | 1          | `RuntimeError`       | 10        |
-| `default`                | `T4`     | 2          | `OutOfMemoryError`   | 10        |
-| `vllm` (no quantization) | `T4`     | dynamic    | >90% prompts skipped | 100       |
-| `default`                | `A100`   | 4          | `OutOfMemoryError`   | 10        |
-| `flash-attn`             | `A100`   | 10         | `OutOfMemoryError`   | 100       |
-
-The only way to successfully run experiments with the T4 instance in all cases was quantization.
-Other failed experiments that were unsuccessful on either the T4, the A100 or both include:
-
- - [DeepSpeed Optimizations](https://github.com/microsoft/DeepSpeed/tree/master/blogs/deepspeed-fastgen)
-   (script: `run_llama2_7b_deepspeed_t4.py`, `run_llama2_7b_deepspeed_a100.py`)
- - [DeepSpeed ZeRO-Inference](https://github.com/microsoft/DeepSpeedExamples/tree/master/inference/huggingface/zero_inference)
-   (script: `run_llama2_7b_deepspeed_zero.py`)
- - [IBM Foundation Model Stack](https://github.com/foundation-model-stack/foundation-model-stack)
-   (script: `run_llama2_7b_chat_ibm_fms.py`)
- - [ONNX Inference](https://github.com/microsoft/Llama-2-Onnx)
-   (scripts: `run_llama2_7b_onnx.py`, `run_llama2_7b_onnx_pipeline.py`)
- - Few-shot inference with the Llama2-7b base model (script: `run_llama2_7b_base_fewshot.py`)
- - HuggingFace pipelining, GGUF model inference, and more...
-
-In most cases, the optimizations were still too slow or the T4 ran out of memory due to lack of quantization.
-More details can be found in the docstrings at the top of the above scripts.
-
-#### Flash Attention Incompatibility
-
-Note that Flash Attention experiments were only run on the A100 GPU since it's incompatible with the T4 machine,
-due to the T4 having an unsupported, older GPU type
-(error: `RuntimeError: FlashAttention only supports Ampere GPUs or newer.`).
-Also, note that the `4-bit` quantization experiments use 16-bit floating points for the computational type
-via `bnb_4bit_compute_dtype`, while for `8-bit` quantization, the computational type is set to the default.
-
-#### vLLM Memory Issues
-
-Meanwhile, `vllm` experiments eat up all the machine's GPU memory when optimizing KV cache and
-during CUDA graph creation, resulting in out of memory limits unless we decrease the maximum model
-sequence length (prompt + output), which results in the majority of documents being skipped. This
-is fixed by AWQ quantization at the expense of throughput (>5x slower). More info on this issue can
-be found in the `scripts/run_llama_7b_vllm.py` script docstring.
+See additional test results not listed above in `docs/other-tests.md`.
 
 ## Next Steps
 
